@@ -19,3 +19,15 @@ body {
     @apply lg:px-9 xl:px-28 w-full;
   }
 }
+
+/* Optional: To hide the scrollbar */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  /* for IE and Edge */
+  scrollbar-width: none;
+  /* for Firefox */
+}

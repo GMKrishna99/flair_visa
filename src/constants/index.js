@@ -188,3 +188,229 @@ export const studentServices = [
     subText: "Find the perfect university for your goals and career.",
   },
 ];
+// constants/index.js
+export const HowItWorksSteps = [
+  {
+    title: "Connect with Experts",
+    subtext:
+      "Connect with our experts to assess your educational goals and visa requirements.",
+    svg: "https://www.flaticon.com/svg/static/icons/svg/4806/4806265.svg", // Example SVG
+  },
+  {
+    title: "Choose Your Program",
+    subtext:
+      "Select the program that best matches your career and academic aspirations.",
+    svg: "https://www.flaticon.com/svg/static/icons/svg/4806/4806265.svg", // Example SVG
+  },
+  {
+    title: "Submit Your Application",
+    subtext: "Complete and submit your application for review and approval.",
+    svg: "https://www.flaticon.com/svg/static/icons/svg/4806/4806265.svg", // Example SVG
+  },
+  {
+    title: "Get Your Visa",
+    subtext:
+      "After approval, get assistance with your visa process to study abroad.",
+    svg: "https://www.flaticon.com/svg/static/icons/svg/4806/4806265.svg", // Example SVG
+  },
+];
+// constants/universities.js
+
+export const universities = [
+  {
+    name: "Harvard University",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Harvard_University_logo.svg/1200px-Harvard_University_logo.svg.png",
+    country: "United States",
+  },
+  {
+    name: "University of Oxford",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Oxford_coat_of_arms.svg/1200px-University_of_Oxford_coat_of_arms.svg.png",
+    country: "United Kingdom",
+  },
+  {
+    name: "Stanford University",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/68/Stanford_University_logo.svg",
+    country: "United States",
+  },
+  {
+    name: "University of Cambridge",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/University_of_Cambridge_crest.svg/1024px-University_of_Cambridge_crest.svg.png",
+    country: "United Kingdom",
+  },
+  {
+    name: "Massachusetts Institute of Technology (MIT)",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/MIT_logo.svg/1200px-MIT_logo.svg.png",
+    country: "United States",
+  },
+  {
+    name: "University of Tokyo",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/University_of_Tokyo_logo.svg/1200px-University_of_Tokyo_logo.svg.png",
+    country: "Japan",
+  },
+  {
+    name: "University of Melbourne",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/University_of_Melbourne_logo.svg/1200px-University_of_Melbourne_logo.svg.png",
+    country: "Australia",
+  },
+  {
+    name: "ETH Zurich",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/ETH_Zurich_logo.svg/1200px-ETH_Zurich_logo.svg.png",
+    country: "Switzerland",
+  },
+  {
+    name: "National University of Singapore",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/National_University_of_Singapore_logo.svg/1200px-National_University_of_Singapore_logo.svg.png",
+    country: "Singapore",
+  },
+  {
+    name: "University of California, Berkeley",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/4/4f/UC_Berkeley_logo.svg",
+    country: "United States",
+  },
+];
+
+export const ratingsData = [
+  {
+    name: "John Doe",
+    university: "Harvard University",
+    photo: "https://randomuser.me/api/portraits/men/1.jpg", // Dummy photo URL
+    rating: 4.5,
+    message:
+      "Amazing experience! The professors are top-notch, and the campus is beautiful. experience! The professors are top-notch, and the campus is beautiful. experience! The professors are top-notch, and the campus is beautiful.",
+  },
+  {
+    name: "Jane Smith",
+    university: "Stanford University",
+    photo: "https://randomuser.me/api/portraits/women/2.jpg", // Dummy photo URL
+    rating: 3.8,
+    message:
+      "Great university, but the workload can be overwhelming at times. experience! The professors are top-notch, and the campus is beautiful. experience! The professors are top-notch, and the campus is beautiful.",
+  },
+  {
+    name: "Mark Johnson",
+    university: "University of Oxford",
+    photo: "https://randomuser.me/api/portraits/men/3.jpg", // Dummy photo URL
+    rating: 4.0,
+    message:
+      "A great learning experience with a vibrant student community. experience! The professors are top-notch, and the campus is beautiful. experience! The professors are top-notch, and the campus is beautiful.",
+  },
+  {
+    name: "Emily Davis",
+    university: "MIT",
+    photo: "https://randomuser.me/api/portraits/women/4.jpg", // Dummy photo URL
+    rating: 5.0,
+    message:
+      "Hands down the best decision of my life! The resources and networking opportunities are endless. experience! The professors are top-notch, and the campus is beautiful. experience! The professors are top-notch, and the campus is beautiful.",
+  },
+  {
+    name: "John Doe",
+    university: "Harvard University",
+    photo: "https://randomuser.me/api/portraits/men/1.jpg", // Dummy photo URL
+    rating: 4.5,
+    message:
+      "Amazing experience! The professors are top-notch, and the campus is beautiful. experience! The professors are top-notch, and the campus is beautiful. experience! The professors are top-notch, and the campus is beautiful.",
+  },
+  {
+    name: "Jane Smith",
+    university: "Stanford University",
+    photo: "https://randomuser.me/api/portraits/women/2.jpg", // Dummy photo URL
+    rating: 3.8,
+    message:
+      "Great university, but the workload can be overwhelming at times. experience! The professors are top-notch, and the campus is beautiful. experience! The professors are top-notch, and the campus is beautiful.",
+  },
+  {
+    name: "Mark Johnson",
+    university: "University of Oxford",
+    photo: "https://randomuser.me/api/portraits/men/3.jpg", // Dummy photo URL
+    rating: 4.0,
+    message:
+      "A great learning experience with a vibrant student community. experience! The professors are top-notch, and the campus is beautiful. experience! The professors are top-notch, and the campus is beautiful.",
+  },
+  {
+    name: "Emily Davis",
+    university: "MIT",
+    photo: "https://randomuser.me/api/portraits/women/4.jpg", // Dummy photo URL
+    rating: 5.0,
+    message:
+      "Hands down the best decision of my life! The resources and networking opportunities are endless. experience! The professors are top-notch, and the campus is beautiful. experience! The professors are top-notch, and the campus is beautiful.",
+  },
+  {
+    name: "mohan",
+    university: "MIT",
+    photo: "https://randomuser.me/api/portraits/women/4.jpg", // Dummy photo URL
+    rating: 5.0,
+    message:
+      "Hands down the best decision of my life! The resources and networking opportunities are endless. experience! The professors are top-notch, and the campus is beautiful. experience! The professors are top-notch, and the campus is beautiful.",
+  },
+];
+
+export const eventsData = [
+  {
+    name: "Annual Christmas Celebration",
+    date: "2024-12-25",
+    pic: "https://via.placeholder.com/150?text=Christmas+Celebration",
+  },
+  {
+    name: "New Year Gala",
+    date: "2024-12-31",
+    pic: "https://via.placeholder.com/150?text=New+Year+Gala",
+  },
+  {
+    name: "Community Outreach Program",
+    date: "2024-11-15",
+    pic: "https://via.placeholder.com/150?text=Community+Outreach",
+  },
+  {
+    name: "Easter Service",
+    date: "2024-03-31",
+    pic: "https://via.placeholder.com/150?text=Easter+Service",
+  },
+  {
+    name: "Youth Retreat",
+    date: "2024-08-20",
+    pic: "https://via.placeholder.com/150?text=Youth+Retreat",
+  },
+  {
+    name: "Music Fest",
+    date: "2024-07-05",
+    pic: "https://via.placeholder.com/150?text=Music+Fest",
+  },
+  {
+    name: "Thanksgiving Dinner",
+    date: "2024-11-28",
+    pic: "https://via.placeholder.com/150?text=Thanksgiving+Dinner",
+  },
+  {
+    name: "Spring Cleanup Drive",
+    date: "2024-04-10",
+    pic: "https://via.placeholder.com/150?text=Cleanup+Drive",
+  },
+];
+
+export const faqData = [
+  {
+    question: "Is there a free trial available?",
+    answer:
+      "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+  },
+  {
+    question: "Can I change my plan later?",
+    answer:
+      "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+  },
+  {
+    question: "What is your cancellation policy?",
+    answer:
+      "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+  },
+  {
+    question: "Can other info be added to an invoice?",
+    answer:
+      "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+  },
+  {
+    question: "How does billing work?",
+    answer:
+      "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+  },
+];

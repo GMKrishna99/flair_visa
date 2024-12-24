@@ -54,7 +54,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop menu */}
-      <ul className="hidden lg:flex md:space-x-8 lg:space-x-4 lg:items-center lg:text-sm xl:space-x-8 xl:text-base ">
+      <ul className="hidden lg:flex md:space-x-8 lg:space-x-4 lg:items-center lg:text-sm xl:space-x-8 xl:text-base z-50">
         {Object.entries(NavLinks).map(([key, { title, href, subLinks }]) => {
           const isActive = location.pathname === href;
 

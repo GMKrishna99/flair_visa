@@ -14,14 +14,14 @@ const Banner = ({ imageSrc, title, subtitle, linkText, linkHref }) => {
       </div>
 
       {/* Overlay with title, subtitle, and link */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white px-4 sm:px-6 md:px-8 w-full md:w-3/4 lg:w-1/2 ">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white px-4 sm:px-6 md:px-8 w-full md:w-3/4 lg:w-full ">
         {/* Title with responsive text size */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center font-semibold my-3 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center font-semibold my-3 leading-tight lg:w-1/2 mx-auto">
           {title}
         </h1>
 
         {/* Subtitle with responsive text size */}
-        <p className="text-sm sm:text-md md:text-lg lg:text-xl text-banner_subtext_color text-center">
+        <p className="text-sm sm:text-md md:text-lg lg:text-xl text-banner_subtext_color text-center w-1/2 mx-auto">
           {subtitle}
         </p>
 

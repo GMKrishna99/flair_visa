@@ -4,7 +4,7 @@ import FooterLogo from "../assets/footerlogo.png";
 
 const Footer = () => {
   return (
-    <footer className="text-[#0656A2]">
+    <footer className="text-[#0656A2] bg-white">
       {/* Top Section */}
       <div className="container mx-auto flex flex-wrap items-start space-y-8 lg:space-y-0 lg:space-x-20 py-8 px-4">
         {/* Logo */}
@@ -47,8 +47,8 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className=" container mx-auto">
-        <div className="bg-white p-4 text-gray-700 text-base flex flex-wrap items-center justify-between px-4 ">
+      <div className="  mx-auto ">
+        <div className="text-white bg-slate-950 p-4 text-gray-700 text-base flex flex-wrap items-center justify-between px-4 ">
           <span className="w-full lg:w-auto text-center lg:text-left ">
             © 2023 Mastersvisa All Rights Reserved.
           </span>
