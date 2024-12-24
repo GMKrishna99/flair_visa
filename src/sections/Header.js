@@ -11,7 +11,7 @@ const Header = () => {
         <a href="mailto:someone@example.com" className="flex items-center">
           <IoMailOpenOutline className="text-primary_color h-5 w-5" />
           <span className="text-header_text_color ml-2 text-sm">
-            info@mastersvisa.com
+            info@flairvisa.com
           </span>
         </a>
         <a

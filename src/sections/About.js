@@ -10,9 +10,9 @@ const About = () => {
       <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
         {/* Left Section (Text and CountUp) */}
         <div className="w-full lg:w-1/2 text-center lg:text-left px-2 py-2">
-          <h1 className="text-5xl">Hello, We are Master Visa</h1>
+          <h1 className="text-5xl">Hello, We are Flairvisa</h1>
           <p className="text-sm sm:text-md md:text-lg text-subtext_color text-justify lg:text-left">
-            Choose Masters Visa Abroad Education Consultants for your path to
+            Choose Flairvisa Abroad Education Consultants for your path to
             success! Our dedicated team provides personalized guidance to
             simplify the complex process of pursuing advanced studies overseas.
             From university selection to visa processing and seamless

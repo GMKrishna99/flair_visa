@@ -200,7 +200,7 @@ const AboutUs = () => {
           <Heading number={"01"} />
               {/* Who We Are.? */}
               <SubHeader title="Who We Are.?" className="mt-4"/>
-            <Description text="Choose Masters Visa Abroad Education Consultants for your path to
+            <Description text="Choose Flairvisa  Abroad Education Consultants for your path to
             success! Our dedicated team provides personalized guidance to
             simplify the complex process of pursuing advanced studies overseas.
             From university selection to visa processing and seamless

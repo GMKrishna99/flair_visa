@@ -42,7 +42,7 @@ const Navbar = () => {
       className="lg:px-9 xl:px-32 px-4 py-4 flex justify-between items-center w-full "
     >
       <a href="/" className="logo">
-        <img src={Logo} className="h-10 w-50 lg:h-8 lg:w-40" alt="logo" />
+        <img src={Logo} className="h-30 w-50 lg:h-20 lg:w-40" alt="logo" />
       </a>
 
       {/* Hamburger icon for mobile */}

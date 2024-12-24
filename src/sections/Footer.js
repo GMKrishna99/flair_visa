@@ -1,6 +1,6 @@
 import React from "react";
 import { FooterLinks } from "../constants/index";
-import FooterLogo from "../assets/footerlogo.png";
+import FooterLogo from "../assets/logo.png";
 
 const Footer = () => {
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
           <img
             src={FooterLogo}
             alt="footer_logo"
-            className="max-w-[150px] lg:max-w-none"
+            className="w-[150px]"
           />
         </div>
 
@@ -50,7 +50,7 @@ const Footer = () => {
       <div className="  mx-auto ">
         <div className="text-white bg-slate-950 p-4 text-gray-700 text-base flex flex-wrap items-center justify-between px-4 ">
           <span className="w-full lg:w-auto text-center lg:text-left ">
-            © 2023 Mastersvisa All Rights Reserved.
+            © 2023 Flairsvisa All Rights Reserved.
           </span>
           <div className="w-full lg:w-auto text-center lg:text-right mt-2 lg:mt-0">
             <a href="#" className="hover:text-primary_color mx-2">
