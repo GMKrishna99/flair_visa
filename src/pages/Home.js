@@ -3,6 +3,12 @@ import HomeBanner from "../assets/banners/home_banner.png";
 import Banner from "../components/Banner";
 import About from "../sections/About";
 import Services from "../sections/services";
+import TopRatedUniversities from "../sections/TopRatedUniversities";
+import Testimonials from "../sections/Testimonials";
+import Events from "../sections/Events";
+import Faq from "../sections/Faq";
+import NewsUpdates from "../sections/NewsUpdates";
+import Button from "../components/Button";
 
 const Home = () => {
   return (
