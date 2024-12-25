@@ -22,7 +22,7 @@ const Home = () => {
     <main className="custom_container">
       {/* Banner */}
       <div>
-        <div className="px-4 " data-aos="fade-up">
+        <div className="px-4 ">
           <Banner
             imageSrc={HomeBanner}
             title={"Turn your Study abroad Dreams into reality"}
@@ -36,39 +36,27 @@ const Home = () => {
       </div>
 
       {/* About Us Section */}
-      <div data-aos="fade-up">
-        <About />
-      </div>
+      <About />
 
       {/* Services Section */}
-      <div data-aos="fade-up">
-        <Services />
-      </div>
+      <Services />
 
       {/* Top Rated Universities Section */}
-      <div data-aos="fade-up">
-        <TopRatedUniversities />
-      </div>
+      <TopRatedUniversities />
 
       {/* Testimonials Section */}
-      <div data-aos="fade-up">
-        <Testimonials />
-      </div>
+      <Testimonials />
 
       {/* Events Section */}
-      <div data-aos="fade-up">
-        <Events />
-      </div>
+
+      <Events />
 
       {/* FAQ Section */}
-      <div data-aos="fade-up">
-        <Faq />
-      </div>
+      <Faq />
 
       {/* News Updates Section */}
-      <div data-aos="fade-up">
-        <NewsUpdates />
-      </div>
+
+      <NewsUpdates />
 
       {/* Free Counselling Section */}
       <div className="flex flex-col items-center justify-center py-8 px-6 md:px-8 lg:px-16">
