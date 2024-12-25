@@ -5,6 +5,7 @@ import Logo from "../assets/logo.png";
 import { useLocation } from "react-router-dom";
 import Button from "../components/Button";
 import { RxCross1 } from "react-icons/rx";
+import Aos from "aos";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(null);
@@ -28,6 +29,7 @@ const Navbar = () => {
         setOpenMenu(null);
         setOpenSubMenu(null);
       }
+      Aos.init({ duration: 1000, once: true });
     };
 
     document.addEventListener("mousedown", handleClickOutside);
@@ -41,20 +43,29 @@ const Navbar = () => {
       ref={navbarRef}
       className="lg:px-9 xl:px-32 px-4 py-4 flex justify-between items-center w-full "
     >
-      <a href="/" className="logo">
-        <img src={Logo} className="h-16 w-50 lg:h-16 lg:w-36" alt="logo" />
+      <a
+        href="/"
+        className="logo"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
+        <img src={Logo} className="h-16 w-50 lg:h-16 lg:w-40" alt="logo" />
       </a>
 
       {/* Hamburger icon for mobile */}
       <div
         className="lg:hidden text-2xl text-black cursor-pointer"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        data-aos="fade-down"
       >
         {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
       </div>
 
       {/* Desktop menu */}
-      <ul className="hidden lg:flex md:space-x-8 lg:space-x-4 lg:items-center lg:text-sm xl:space-x-8 xl:text-base z-50">
+      <ul
+        className="hidden lg:flex md:space-x-8 lg:space-x-4 lg:items-center lg:text-sm xl:space-x-8 xl:text-base z-50"
+        data-aos="fade-left"
+      >
         {Object.entries(NavLinks).map(([key, { title, href, subLinks }]) => {
           const isActive = location.pathname === href;
 
@@ -131,7 +142,11 @@ const Navbar = () => {
             </li>
           );
         })}
-        <Button className="hidden lg:block" onClick={() => {}}>
+        <Button
+          className="hidden lg:block"
+          onClick={() => {}}
+          data-aos="fade-left"
+        >
           Book Appointment
         </Button>
       </ul>

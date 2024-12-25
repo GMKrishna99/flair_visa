@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { faqData } from "../constants/Faq";
+import Aos from "aos"; // Import AOS
+import "aos/dist/aos.css"; // Import AOS styles
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+
+  // Initialize AOS when the component mounts
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
 
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -10,9 +17,12 @@ const FAQ = () => {
 
   return (
     <section className="py-8 px-6 md:px-8 lg:px-16">
-      <div className="flex flex-col lg:flex-row items-center justify-center bg-white shadow-xl rounded-lg mx-auto w-full md:full lg:w-full p-6">
+      <div
+        className="flex flex-col lg:flex-row items-center justify-center bg-white shadow-xl rounded-lg mx-auto w-full md:full lg:w-full p-6"
+        data-aos="fade-up"
+      >
         {/* Heading Section */}
-        <div className="text-center mb-8 flex-1">
+        <div className="text-center mb-8 flex-1" data-aos="fade-left">
           <h2 className="text-3xl font-bold text-gray-800">
             You ask - we answer.
           </h2>
@@ -27,6 +37,8 @@ const FAQ = () => {
             <div
               key={index}
               className="rounded-lg p-4 transition-all duration-1000 ease-in-out"
+              data-aos="zoom-in"
+              data-aos-delay={index * 100} // Stagger animation for each FAQ item
             >
               {/* Question */}
               <div

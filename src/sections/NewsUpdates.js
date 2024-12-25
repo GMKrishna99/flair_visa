@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { newsData } from "../constants/NewsUpdates.constance"; // Import your newsData
 import { BeatLoader } from "react-spinners";
+import Aos from "aos"; // Import AOS
+import "aos/dist/aos.css"; // Import AOS styles
 
 const News = () => {
   const [selectedCountry, setSelectedCountry] = useState("All");
   const [loading, setLoading] = useState(false); // Loader state
+
+  // Initialize AOS when the component mounts
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
 
   const handleCountryChange = (country) => {
     setLoading(true); // Start loading when country is selected
@@ -21,7 +28,7 @@ const News = () => {
 
   return (
     <section className="py-8 px-6 md:px-8 lg:px-16">
-      <div className="text-center mb-8">
+      <div className="text-center mb-8" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-gray-800">
           Latest News & Updates
         </h2>
@@ -31,7 +38,10 @@ const News = () => {
       </div>
 
       {/* Buttons for selecting country */}
-      <div className="flex justify-center mb-6 space-x-4 overflow-x-auto md:space-x-8 whitespace-nowrap scrollbar-hidden">
+      <div
+        className="flex justify-center mb-6 space-x-4 overflow-x-auto md:space-x-8 whitespace-nowrap scrollbar-hidden"
+        data-aos="fade-left"
+      >
         {[
           "All",
           "USA",
@@ -67,6 +77,8 @@ const News = () => {
             <div
               key={index}
               className="rounded-lg border shadow-md transition-all flex flex-col lg:flex-row items-start"
+              data-aos="fade-up"
+              data-aos-delay={index * 100} // Stagger animation for each news item
             >
               {/* Left Section (Image) */}
               <div className="w-full lg:w-1/3 h-full flex justify-center items-center overflow-hidden">

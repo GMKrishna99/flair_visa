@@ -3,11 +3,14 @@ import Heading from "../components/Heading";
 import Button from "../components/Button";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { ratingsData } from "../constants/Rating"; // Ensure the path is correct
+import Aos from "aos"; // Import AOS
+import "aos/dist/aos.css"; // Import AOS styles
 
 const Testimonials = () => {
   const scrollContainerRef = useRef(null);
 
   useEffect(() => {
+    Aos.init({ duration: 1000, once: true }); // Initialize AOS
     const scrollContainer = scrollContainerRef.current;
     const scrollAmount = 400; // Adjust this value to change scroll speed
     let scrollInterval;
@@ -36,7 +39,7 @@ const Testimonials = () => {
 
   return (
     <section className="py-8 px-6 md:px-2">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center" data-aos="fade-up">
         <Heading
           number={"04"}
           text={"What our students say"}
@@ -44,18 +47,25 @@ const Testimonials = () => {
             "Read more student reviews on our Google page and leave your own"
           }
         />
-        <div className="hidden md:block">
+        <div
+          className="hidden md:block"
+          data-aos="fade-left"
+          data-aos-delay="200"
+        >
           <Button>see More Reviews</Button>
         </div>
       </div>
       <div
         ref={scrollContainerRef}
         className="flex space-x-3 overflow-x-auto py-6 md:space-x-3 scrollbar-hidden scroll-smooth"
+        data-aos="fade-up"
       >
         {ratingsData.map((student, index) => (
           <div
             key={index}
             className="bg-white p-3 rounded-xl shadow-lg w-full sm:w-[350px] md:w-[400px] lg:w-[450px] h-[390px] text-left flex-shrink-0"
+            data-aos="zoom-in"
+            data-aos-delay={index * 200} // Adding delay to each card animation
           >
             <div className="bg-gray-100 p-3 rounded-lg h-full flex flex-col">
               {/* Rating Section */}

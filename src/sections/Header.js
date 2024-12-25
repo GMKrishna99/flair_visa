@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
 import { SocialIcons } from "../constants/Social";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Header = () => {
   const googleMapUrl = `https://maps.app.goo.gl/xSUR2c19Akd3ZV6t6`;
+
+  // Initialize AOS on component mount
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // Animation duration in ms
+      once: true, // Animations happen only once
+    });
+  }, []);
+
   return (
-    <div className=" w-full bg-header_color py-4 px-4 sm:px-6 lg:px-9 xl:px-32 hidden md:flex md:items-center lg:justify-between md:justify-center">
-      <div className="lg:flex xl:gap-40 gap-10 hidden ">
+    <div
+      className="w-full bg-header_color py-4 px-4 sm:px-6 lg:px-9 xl:px-32 hidden md:flex md:items-center lg:justify-between md:justify-center"
+      data-aos="fade-in"
+    >
+      <div className="lg:flex xl:gap-40 gap-10 hidden" data-aos="fade-right">
         <a href="mailto:someone@example.com" className="flex items-center">
           <IoMailOpenOutline className="text-primary_color h-5 w-5" />
           <span className="text-header_text_color ml-2 text-sm">
@@ -27,7 +41,7 @@ const Header = () => {
           </span>
         </a>
       </div>
-      <div className="flex gap-4">
+      <div className="flex gap-4" data-aos="fade-left">
         {Object.entries(SocialIcons).map(([key, { icon, href }]) => (
           <a
             key={key}
