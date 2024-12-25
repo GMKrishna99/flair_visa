@@ -1,7 +1,7 @@
 import React from "react";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
-import { SocialIcons } from "../constants";
+import { SocialIcons } from "../constants/Social";
 
 const Header = () => {
   const googleMapUrl = `https://maps.app.goo.gl/xSUR2c19Akd3ZV6t6`;

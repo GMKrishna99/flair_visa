@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import Heading from "../components/Heading";
-import { universities } from "../constants/index";
+import { universities } from "../constants/University";
 import Button from "../components/Button";
 
 const TopRatedUniversities = () => {
@@ -51,17 +51,24 @@ const TopRatedUniversities = () => {
             {universities.map((university, index) => (
               <div
                 key={index}
-                className="bg-white border rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300 w-64 sm:w-48 md:w-56 lg:w-64"
+                className="bg-white border rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300 w-64 sm:w-48 md:w-56 lg:w-64 flex flex-col justify-between h-full"
               >
-                <img
-                  src={university.logo}
-                  alt={`${university.name} Logo`}
-                  className="w-24 h-24 mx-auto mb-4"
-                />
-                <h3 className="text-xl font-semibold mb-2 overflow-hidden text-ellipsis whitespace-nowrap">
+                {/* Logo */}
+                <div className="flex justify-center mb-4">
+                  <img
+                    src={university.logo}
+                    alt={`${university.name} Logo`}
+                    className="w-24 h-24 object-contain"
+                  />
+                </div>
+
+                {/* University Name */}
+                <h3 className="text-xl font-semibold mb-2 truncate">
                   {university.name}
                 </h3>
-                <p className="text-md text-gray-600 overflow-hidden text-ellipsis whitespace-nowrap">
+
+                {/* University Country */}
+                <p className="text-md text-gray-600 break-words">
                   {university.country}
                 </p>
               </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaChevronDown, FaChevronRight, FaBars, FaTimes } from "react-icons/fa";
-import { NavLinks } from "../constants";
+import { NavLinks } from "../constants/NavLinks";
 import Logo from "../assets/logo.png";
 import { useLocation } from "react-router-dom";
 import Button from "../components/Button";
@@ -42,7 +42,7 @@ const Navbar = () => {
       className="lg:px-9 xl:px-32 px-4 py-4 flex justify-between items-center w-full "
     >
       <a href="/" className="logo">
-        <img src={Logo} className="h-30 w-50 lg:h-20 lg:w-40" alt="logo" />
+        <img src={Logo} className="h-16 w-50 lg:h-16 lg:w-36" alt="logo" />
       </a>
 
       {/* Hamburger icon for mobile */}

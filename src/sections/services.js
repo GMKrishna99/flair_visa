@@ -1,6 +1,6 @@
 import React from "react";
 import Heading from "../components/Heading";
-import { studentServices } from "../constants";
+import { studentServices } from "../constants/StudenServices";
 import { FaChevronRight } from "react-icons/fa";
 
 const services = () => {

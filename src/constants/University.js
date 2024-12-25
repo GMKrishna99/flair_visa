@@ -1,52 +1,63 @@
+import HarvardUniversity from "../assets/university_logos/harvard_university.png";
+import OxfordUniversity from "../assets/university_logos/University of Oxford.png";
+import StanfordUniversity from "../assets/university_logos/Stanford University.png";
+import CambridgeUniversity from "../assets/university_logos/University of Cambridge.png";
+import MassachusettsUniversity from "../assets/university_logos/Massachusetts Institute of Technology (MIT).png";
+import TokyoUniversity from "../assets/university_logos/University of Tokyo.png";
+import MelbourneUniversity from "../assets/university_logos/University of Melbourne.png";
+import ETHUniversity from "../assets/university_logos/ETH Zurich.png";
+import SingaporeUniversity from "../assets/university_logos/National University of Singapore.png";
+import CaliforniaUniversity from "../assets/university_logos/University of California, Berkeley.png";
+
 export const universities = [
   {
     name: "Harvard University",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Harvard_University_logo.svg/1200px-Harvard_University_logo.svg.png",
+    logo: HarvardUniversity,
     country: "United States",
   },
   {
     name: "University of Oxford",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Oxford_coat_of_arms.svg/1200px-University_of_Oxford_coat_of_arms.svg.png",
+    logo: OxfordUniversity,
     country: "United Kingdom",
   },
   {
     name: "Stanford University",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/6/68/Stanford_University_logo.svg",
+    logo: StanfordUniversity,
     country: "United States",
   },
   {
     name: "University of Cambridge",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/University_of_Cambridge_crest.svg/1024px-University_of_Cambridge_crest.svg.png",
+    logo: CambridgeUniversity,
     country: "United Kingdom",
   },
   {
-    name: "Massachusetts Institute of Technology (MIT)",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/MIT_logo.svg/1200px-MIT_logo.svg.png",
+    name: "MIT",
+    logo: MassachusettsUniversity,
     country: "United States",
   },
   {
     name: "University of Tokyo",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/University_of_Tokyo_logo.svg/1200px-University_of_Tokyo_logo.svg.png",
+    logo: TokyoUniversity,
     country: "Japan",
   },
   {
     name: "University of Melbourne",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/University_of_Melbourne_logo.svg/1200px-University_of_Melbourne_logo.svg.png",
+    logo: MelbourneUniversity,
     country: "Australia",
   },
   {
     name: "ETH Zurich",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/ETH_Zurich_logo.svg/1200px-ETH_Zurich_logo.svg.png",
+    logo: ETHUniversity,
     country: "Switzerland",
   },
   {
     name: "National University of Singapore",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/National_University_of_Singapore_logo.svg/1200px-National_University_of_Singapore_logo.svg.png",
+    logo: SingaporeUniversity,
     country: "Singapore",
   },
   {
     name: "University of California, Berkeley",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/4/4f/UC_Berkeley_logo.svg",
+    logo: CaliforniaUniversity,
     country: "United States",
   },
 ];

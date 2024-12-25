@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Heading from "../components/Heading";
 import Button from "../components/Button";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
-import { ratingsData } from "../constants/index"; // Ensure the path is correct
+import { ratingsData } from "../constants/Rating"; // Ensure the path is correct
 
 const Testimonials = () => {
   const scrollContainerRef = useRef(null);

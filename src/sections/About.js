@@ -1,7 +1,7 @@
 import Heading from "../components/Heading";
 import AboutImg from "../assets/about.png";
 import CountUp from "react-countup"; // Import CountUp
-import { ReactCountUp } from "../constants"; // Import ReactCountUp from constants
+import { ReactCountUp } from "../constants/CountUp"; // Import ReactCountUp from constants
 
 const About = () => {
   return (

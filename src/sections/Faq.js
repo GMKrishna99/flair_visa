@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { faqData } from "../constants/index";
+import { faqData } from "../constants/Faq";
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);

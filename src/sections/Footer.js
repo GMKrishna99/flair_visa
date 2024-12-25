@@ -1,5 +1,5 @@
 import React from "react";
-import { FooterLinks } from "../constants/index";
+import { FooterLinks } from "../constants/FooterLinks";
 import FooterLogo from "../assets/logo.png";
 
 const Footer = () => {
@@ -9,11 +9,7 @@ const Footer = () => {
       <div className="container mx-auto flex flex-wrap items-start space-y-8 lg:space-y-0 lg:space-x-20 py-8 px-4">
         {/* Logo */}
         <div className="w-full lg:w-auto flex justify-center lg:justify-start">
-          <img
-            src={FooterLogo}
-            alt="footer_logo"
-            className="w-[150px]"
-          />
+          <img src={FooterLogo} alt="footer_logo" className="w-[250px]" />
         </div>
 
         {/* Footer Links */}

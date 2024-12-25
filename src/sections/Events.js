@@ -3,8 +3,7 @@ import Heading from "../components/Heading";
 import Button from "../components/Button";
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
-import { eventsData } from "../constants/index";
-import { SlCalender } from "react-icons/sl";
+import { eventsData } from "../constants/Events";
 import { CiCalendar } from "react-icons/ci";
 
 const Events = () => {
@@ -44,33 +43,41 @@ const Events = () => {
           {eventsData.map((event, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-xl p-4 flex-shrink-0 w-56 md:w-64 text-center snap-start "
+              className="bg-white shadow-lg rounded-xl p-4 flex-shrink-0 w-56 md:w-64 text-center snap-start flex flex-col"
             >
-              <h3 className="text-xl font-semibold truncate">{event.name}</h3>
-              <p className="text-sm bg-gray-200 p-3 rounded-full mt-2 font-semibold flex items-center justify-center gap-5">
-                <CiCalendar className="w-5 h-5" />
+              {/* Event Image */}
+              <div className="relative mb-4 h-40">
+                <img
+                  src={event.pic}
+                  alt={event.name}
+                  className="w-full h-40 object-cover rounded-lg"
+                />
+              </div>
+              {/* Event Title */}
+              <h3 className="text-xl font-medium truncate mb-2">
+                {event.name}
+              </h3>
 
+              {/* Event Date */}
+              <p className="text-sm bg-gray-100 p-3 rounded-full mt-2 font-regular flex items-center justify-center gap-2">
+                <CiCalendar className="w-5 h-5" />
                 {event.date}
               </p>
-              <img
-                src={event.pic}
-                alt={event.name}
-                className="w-full mx-auto mt-4 rounded-lg"
-              />
             </div>
           ))}
         </div>
+
         {/* Navigation Buttons */}
         <div className="flex justify-center space-x-4 mt-4">
           <button
             onClick={() => scroll("left")}
-            className="p-4  border-2 border-primary_color rounded-full text-primary_color hover:border-primary_color/90 hover:text-primary_color"
+            className="p-4 border-2 border-primary_color rounded-full text-primary_color hover:border-primary_color/90 hover:text-primary_color"
           >
             <FaChevronRight />
           </button>
           <button
             onClick={() => scroll("right")}
-            className="p-4  border-2 bg-primary_color rounded-full text-white hover:bg-primary_color/90 "
+            className="p-4 border-2 bg-primary_color rounded-full text-white hover:bg-primary_color/90"
           >
             <FaChevronLeft />
           </button>
