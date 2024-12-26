@@ -11,6 +11,7 @@ import NewsUpdates from "../sections/NewsUpdates";
 import Button from "../components/Button";
 import Aos from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles
+import BuildingsSvg from "../assets/buildings.svg";
 
 const Home = () => {
   // Initialize AOS when the component mounts
@@ -19,21 +20,27 @@ const Home = () => {
   }, []);
 
   return (
-    <main>
+    <main className="relative">
+      {/* Background Image for Building */}
+      <div className="absolute top-[32%] right-0 -z-1">
+        <img
+          src={BuildingsSvg}
+          alt="buildings"
+          className="w-full h-full object-cover opacity-30 hidden md:block"
+        />
+      </div>
+
       {/* Banner */}
       <div>
-        <div className="">
-          <Banner
-            imageSrc={HomeBanner}
-            title={"Turn your Study abroad Dreams into reality"}
-            linkHref={"/courses"}
-            linkText={"Start your Journey"}
-            subtitle={
-              "Transforming Aspirations into International Achievements"
-            }
-          />
-        </div>
+        <Banner
+          imageSrc={HomeBanner}
+          title={"Turn your Study abroad Dreams into reality"}
+          linkHref={"/courses"}
+          linkText={"Start your Journey"}
+          subtitle={"Transforming Aspirations into International Achievements"}
+        />
       </div>
+
       <div className="custom_container">
         {/* About Us Section */}
         <About />
@@ -48,14 +55,12 @@ const Home = () => {
         <Testimonials />
 
         {/* Events Section */}
-
         <Events />
 
         {/* FAQ Section */}
         <Faq />
 
         {/* News Updates Section */}
-
         <NewsUpdates />
 
         {/* Free Counselling Section */}
