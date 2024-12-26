@@ -54,6 +54,6 @@ export const NavLinks = {
   },
   contact: {
     title: "Contact",
-    href: "/contact",
+    href: "/contact-us",
   },
 };
