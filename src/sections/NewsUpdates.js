@@ -5,7 +5,17 @@ import Aos from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles
 
 const News = () => {
-  const [selectedCountry, setSelectedCountry] = useState("All");
+  const countries = [
+    "USA",
+    "UK",
+    "Canada",
+    "Australia",
+    "Germany",
+    "New Zealand",
+    "European Union",
+  ];
+
+  const [selectedCountry, setSelectedCountry] = useState(countries[0]); // Default to the first country
   const [loading, setLoading] = useState(false); // Loader state
 
   // Initialize AOS when the component mounts
@@ -21,10 +31,9 @@ const News = () => {
     }, 800); // Adjust the delay based on the data processing time
   };
 
-  const filteredNews =
-    selectedCountry === "All"
-      ? newsData
-      : newsData.filter((item) => item.country === selectedCountry);
+  const filteredNews = newsData.filter(
+    (item) => item.country === selectedCountry
+  );
 
   return (
     <section className="py-8 px-6 md:px-8 lg:px-16">
@@ -42,16 +51,7 @@ const News = () => {
         className="flex justify-center mb-6 space-x-4 overflow-x-auto md:space-x-8 whitespace-nowrap scrollbar-hidden"
         data-aos="fade-left"
       >
-        {[
-          "All",
-          "USA",
-          "UK",
-          "Canada",
-          "Australia",
-          "Germany",
-          "New Zealand",
-          "European Union",
-        ].map((country) => (
+        {countries.map((country) => (
           <button
             key={country}
             onClick={() => handleCountryChange(country)}
