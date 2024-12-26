@@ -11,7 +11,7 @@ export const data = [
   {
     title: "Free processing for all countries",
     description:
-      "Enjoy seamless visa application services without additional processing fees for any country. Our expertise ensures efficiency at every step.",
+      "Enjoy seamless visa application services without additional processing fees for any country.",
     icon: (
       <img
         src={boxIcon1} // Image path
