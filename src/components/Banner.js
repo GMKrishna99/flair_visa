@@ -7,7 +7,6 @@ const Banner = ({ imageSrc, title, subtitle, linkText, linkHref }) => {
   useEffect(() => {
     Aos.init({ duration: 1000, once: true }); // Initialize AOS when the component mounts
   }, []);
-
   return (
     <div className="relative">
       {/* Banner Image */}

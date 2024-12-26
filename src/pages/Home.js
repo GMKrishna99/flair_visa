@@ -19,10 +19,10 @@ const Home = () => {
   }, []);
 
   return (
-    <main className="custom_container">
+    <main>
       {/* Banner */}
       <div>
-        <div className="px-4 ">
+        <div className="">
           <Banner
             imageSrc={HomeBanner}
             title={"Turn your Study abroad Dreams into reality"}
@@ -34,48 +34,49 @@ const Home = () => {
           />
         </div>
       </div>
+      <div className="custom_container">
+        {/* About Us Section */}
+        <About />
 
-      {/* About Us Section */}
-      <About />
+        {/* Services Section */}
+        <Services />
 
-      {/* Services Section */}
-      <Services />
+        {/* Top Rated Universities Section */}
+        <TopRatedUniversities />
 
-      {/* Top Rated Universities Section */}
-      <TopRatedUniversities />
+        {/* Testimonials Section */}
+        <Testimonials />
 
-      {/* Testimonials Section */}
-      <Testimonials />
+        {/* Events Section */}
 
-      {/* Events Section */}
+        <Events />
 
-      <Events />
+        {/* FAQ Section */}
+        <Faq />
 
-      {/* FAQ Section */}
-      <Faq />
+        {/* News Updates Section */}
 
-      {/* News Updates Section */}
+        <NewsUpdates />
 
-      <NewsUpdates />
-
-      {/* Free Counselling Section */}
-      <div className="flex flex-col items-center justify-center py-8 px-6 md:px-8 lg:px-16">
-        <h2
-          className="text-5xl font-bold text-center mt-6 mb-6 "
-          data-aos="fade-up"
-        >
-          Get a <span className="text-primary_color">Free Counselling</span>
-        </h2>
-        <p
-          className="text-subtext_color text-sm font-medium mb-6 text-center"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          Find your ideal study abroad destination, apply, and connect with our
-          expert guidance counselors
-        </p>
-        <div data-aos="fade-up" data-aos-delay="400">
-          <Button>Apply Now</Button>
+        {/* Free Counselling Section */}
+        <div className="flex flex-col items-center justify-center py-8 px-6 md:px-8 lg:px-16">
+          <h2
+            className="text-5xl font-bold text-center mt-6 mb-6 "
+            data-aos="fade-up"
+          >
+            Get a <span className="text-primary_color">Free Counselling</span>
+          </h2>
+          <p
+            className="text-subtext_color text-sm font-medium mb-6 text-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Find your ideal study abroad destination, apply, and connect with
+            our expert guidance counselors
+          </p>
+          <div data-aos="fade-up" data-aos-delay="400">
+            <Button>Apply Now</Button>
+          </div>
         </div>
       </div>
     </main>
