@@ -29,7 +29,6 @@ const MapComponent = () => {
         width="600"
         height="450"
         allowFullScreen=""
-        // referrerPolicy="no-referrer-when-downgrade"
         scrolling="no"
         className="w-full h-96 rounded-lg shadow-md pointer-events-none"
         data-aos="fade-in"
@@ -37,7 +36,7 @@ const MapComponent = () => {
 
       {/* Info Card with Down Arrow */}
       <div
-        className="absolute top-[9%] left-[41%] transform -translate-x-1/2 -translate-y-1/2 bg-[#181621] rounded-lg shadow-lg p-6 w-80"
+        className="absolute top-10 left-12 md:top-[9%] md:left-[50%] transform -translate-x-1/2 -translate-y-1/2 bg-[#181621] rounded-lg shadow-lg p-6 w-3/4 md:w-72 lg:w-[300px]"
         data-aos="fade-up" // Add AOS animation
       >
         <h3 className="text-lg font-semibold text-white pb-3">
@@ -62,7 +61,7 @@ const MapComponent = () => {
 
       {/* Arrow pointing down */}
       <div
-        className="absolute bg-white top-28 left-[46.5%] w-0 h-0 border-l-10 border-l-transparent border-r-10 border-r-transparent border-t-[20px] border-t-[#181621] rotate-6"
+        className="absolute bg-white top-28 left-[50%] transform -translate-x-1/2 w-0 h-0 border-l-10 border-l-transparent border-r-10 border-r-transparent border-t-[20px] border-t-[#181621] rotate-6"
         data-aos="fade-down" // Add AOS animation
       ></div>
     </div>

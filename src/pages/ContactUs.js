@@ -4,10 +4,19 @@ import "react-phone-input-2/lib/style.css";
 import MapComponent from "../components/MapComponent";
 import OurBranchesSlide from "../sections/OurBranchesSlide";
 import ContactForm from "../sections/ContactForm";
+import MapBakground from "../assets/map_contact.svg";
 
 const ContactUs = () => {
   return (
-    <section>
+    <section className="relative overflow-hidden">
+      {/* Background Image for Building */}
+      <div className="absolute top-[63%] -right-[40%] -z-1">
+        <img
+          src={MapBakground}
+          alt="buildings"
+          className="w-full h-full object-cover opacity-20 hidden md:block"
+        />
+      </div>
       <Banner
         imageSrc={ContactUsBanner}
         title={"Get in Touch with Us"}

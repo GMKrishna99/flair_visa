@@ -36,27 +36,27 @@ const FAQ = () => {
           {faqData.map((item, index) => (
             <div
               key={index}
-              className="rounded-lg p-4 transition-all duration-1000 ease-in-out"
+              className="rounded-lg p-4"
               data-aos="zoom-in"
               data-aos-delay={index * 100} // Stagger animation for each FAQ item
             >
               {/* Question */}
               <div
                 onClick={() => toggleFAQ(index)}
-                className="flex flex-row justify-between items-center cursor-pointer"
+                className="flex flex-row justify-between items-center cursor-pointer  "
               >
-                <h3 className="text-lg md:text-xl font-semibold text-gray-700">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-700 ">
                   {item.question}
                 </h3>
-                <span className="text-gray-500 text-2xl mt-2 md:mt-0">
+                <span className="text-primary_color text-2xl mt-2 md:mt-0">
                   {activeIndex === index ? "-" : "+"}
                 </span>
               </div>
 
               {/* Answer */}
               <div
-                className={`mt-3 text-gray-600 text-sm transition-all duration-500 ease-in-out overflow-hidden ${
-                  activeIndex === index ? "max-h-96" : "max-h-0"
+                className={`mt-3 text-gray-600 text-sm overflow-hidden transition-all duration-1000 ease-in-out ${
+                  activeIndex === index ? "max-h-12" : "max-h-0"
                 }`}
               >
                 {item.answer}
