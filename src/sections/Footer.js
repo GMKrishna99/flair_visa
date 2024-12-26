@@ -31,6 +31,8 @@ const Footer = () => {
             <div
               key={index}
               className="flex flex-col items-stretch justify-start"
+              data-aos="fade-up"
+              data-aos-delay={index * 200}
             >
               <div>
                 {/* Section Title with Underline */}
@@ -40,12 +42,7 @@ const Footer = () => {
               </div>
               <ul>
                 {section.footLinks.map((link, idx) => (
-                  <li
-                    key={idx}
-                    className="mb-2"
-                    data-aos="fade-up"
-                    data-aos-delay={idx * 100}
-                  >
+                  <li key={idx} className="mb-2">
                     <a
                       href={link.href}
                       className="text-sm font-medium text-gray-400 hover:text-[#0656A2] transition-all duration-300 ease-in-out"
@@ -61,12 +58,18 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="mx-auto" data-aos="fade-up">
-        <div className="text-white bg-slate-950 p-4 text-gray-700 text-base flex flex-wrap items-center justify-between px-4 ">
+      <div className="mx-auto">
+        <div
+          className="text-white bg-slate-950 p-4 text-gray-700 text-base flex flex-wrap items-center justify-between px-4 "
+          data-aos="fade-up"
+        >
           <span className="w-full lg:w-auto text-center lg:text-left ">
             © 2023 Flairsvisa All Rights Reserved.
           </span>
-          <div className="w-full lg:w-auto text-center lg:text-right mt-2 lg:mt-0">
+          <div
+            className="w-full lg:w-auto text-center lg:text-right mt-2 lg:mt-0"
+            data-aos="fade-right"
+          >
             <a href="#" className="hover:text-primary_color mx-2">
               Disclaimer
             </a>
