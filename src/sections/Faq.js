@@ -56,7 +56,7 @@ const FAQ = () => {
               {/* Answer */}
               <div
                 className={`mt-3 text-gray-600 text-sm overflow-hidden transition-all duration-1000 ease-in-out ${
-                  activeIndex === index ? "max-h-12" : "max-h-0"
+                  activeIndex === index ? "max-h-11" : "max-h-0"
                 }`}
               >
                 {item.answer}

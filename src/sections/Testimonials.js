@@ -41,7 +41,7 @@ const Testimonials = () => {
     <section className="py-8 px-6 md:px-2">
       <div className="flex justify-between items-center" data-aos="fade-up">
         <Heading
-          number={"04"}
+          number={"05"}
           text={"What our students say"}
           subtext={
             "Read more student reviews on our Google page and leave your own"

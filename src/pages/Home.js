@@ -12,6 +12,7 @@ import Button from "../components/Button";
 import Aos from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles
 import BuildingsSvg from "../assets/buildings.svg";
+import HowWeWorks from "../sections/HowWeWorks";
 
 const Home = () => {
   // Initialize AOS when the component mounts
@@ -22,13 +23,13 @@ const Home = () => {
   return (
     <main className="relative">
       {/* Background Image for Building */}
-      <div className="absolute top-[32%] right-0 -z-1">
+      {/* <div className="absolute top-[25%] right-0 -z-1">
         <img
           src={BuildingsSvg}
           alt="buildings"
           className="w-full h-full object-cover opacity-30 hidden md:block"
         />
-      </div>
+      </div> */}
 
       {/* Banner */}
       <div>
@@ -47,6 +48,8 @@ const Home = () => {
 
         {/* Services Section */}
         <Services />
+
+        <HowWeWorks />
 
         {/* Top Rated Universities Section */}
         <TopRatedUniversities />

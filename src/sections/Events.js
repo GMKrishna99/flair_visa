@@ -36,7 +36,7 @@ const Events = () => {
   return (
     <section className="py-8 px-6 md:px-2">
       <div className="flex justify-between items-center" data-aos="fade-up">
-        <Heading number={"04"} text={"Study abroad events"} />
+        <Heading number={"06"} text={"Study abroad events"} />
         <div
           className="hidden md:block"
           data-aos="fade-left"
@@ -88,7 +88,7 @@ const Events = () => {
             data-aos="fade-left"
             data-aos-delay="400"
           >
-            <FaChevronRight />
+            <FaChevronLeft />
           </button>
           <button
             onClick={() => scroll("right")}
@@ -96,7 +96,7 @@ const Events = () => {
             data-aos="fade-right"
             data-aos-delay="400"
           >
-            <FaChevronLeft />
+            <FaChevronRight />
           </button>
         </div>
       </div>

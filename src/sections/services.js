@@ -36,12 +36,15 @@ const Services = () => {
             <div className="flex items-center mb-4 flex-col gap-6">
               <div
                 className="rounded-full p-3 flex"
-                style={{ backgroundColor: service.icon.backgroundColor }}
+                style={{ backgroundColor: service.icon.backgroundColor }} // Dynamic background color for icon
               >
                 <div className="bg-white rounded-full p-8">
                   <div
                     className="w-12 h-12 rounded-full p-3 flex justify-center items-center text-white"
-                    style={{ backgroundColor: service.icon.backgroundColor }}
+                    style={{
+                      backgroundColor: service.icon.iconBg,
+                      boxShadow: `0 4px 6px ${service.icon.iconShadow}`,
+                    }} // Dynamic icon background color and shadow
                   >
                     {service.icon.src} {/* Render the React Icon here */}
                   </div>

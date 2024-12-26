@@ -6,7 +6,9 @@ export const studentServices = [
     icon: {
       src: <FaUserGraduate />, // React Icon component
       alt: "Student Counselling Icon",
-      backgroundColor: "#FF5733", // Background color for the icon
+      iconBg: "#0D1282",
+      iconShadow: "rgba(13, 18, 130, 30)",
+      backgroundColor: "#F9F9F9", // Background color for the icon
     },
     href: "/student-counselling",
     subText: "Guiding you through academic and personal challenges.",
@@ -16,7 +18,9 @@ export const studentServices = [
     icon: {
       src: <FaPassport />,
       alt: "Visa Counselling Icon",
-      backgroundColor: "#33B5FF",
+      iconBg: "#D71313",
+      iconShadow: "rgba(215, 19, 19, 30)",
+      backgroundColor: "#F9F9F9",
     },
     href: "/visa-counselling",
     subText: "Helping you understand visa processes and requirements.",
@@ -26,7 +30,9 @@ export const studentServices = [
     icon: {
       src: <FaUniversity />,
       alt: "University Icon",
-      backgroundColor: "#28A745",
+      iconBg: "#0D1282",
+      iconShadow: "rgba(13, 18, 130, 30)",
+      backgroundColor: "#F9F9F9",
     },
     href: "/choose-university",
     subText: "Find the perfect university for your goals and career.",
