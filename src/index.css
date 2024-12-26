@@ -31,8 +31,11 @@ body {
   scrollbar-width: none;
   /* for Firefox */
 }
+
 /* Add this in your global styles if needed */
 .map-container {
-  height: 400px; /* You can adjust the height here */
-  width: 100%; /* Full width */
+  height: 400px;
+  /* You can adjust the height here */
+  width: 100%;
+  /* Full width */
 }

@@ -34,7 +34,7 @@ const TopRatedUniversities = () => {
     <section className="py-8 px-6 md:px-2">
       <div className="flex justify-between items-center">
         <Heading
-          number={"03"}
+          number={"04"}
           text={"Discover top-rated Universities"}
           subtext={
             "Start your success story at a renowned university with our guidance"
