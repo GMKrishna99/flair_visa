@@ -51,7 +51,8 @@ const AboutUs = () => {
         <Banner
           imageSrc={aboutBanner}
           title="About Us"
-          subtitle="we are dedicated to helping students turn their dreams of studying abroad into reality. With expert guidance and comprehensive support, we simplify every step of the journey to renowned global institutions."
+          showCounter={true} // Pass true to show the counter, false to hide it
+          subtitle="We are dedicated to helping students turn their dreams of studying abroad into reality. "
         />
       </div>
       <section className="py-10 px-4 md:px-8">
