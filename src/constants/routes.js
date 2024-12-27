@@ -3,7 +3,7 @@ import { useRoutes } from "react-router-dom";
 import MainLayout from "../../src/MainLayout";
 import Home from "../pages/Home";
 import About from "../pages/AboutUs";
-import FAQs from "../pages/FAQ’s"
+import FAQ from "../pages/FAQ’s"
 import ContactUs from "../pages/ContactUs";
 import StudyAbroadUSA from "../pages/Study.Abroad.USA";
 
