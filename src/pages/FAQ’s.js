@@ -8,9 +8,8 @@ const FAQPage = () => {
 
 
   return (
-    <main className="custom_container">
          <div>
-        <div className="px-4 ">
+        <div>
           <Banner
             imageSrc={FAQs}
             title={"Your Questions, Answered"}
@@ -19,10 +18,11 @@ const FAQPage = () => {
             }
           />
         </div>
+        <main className="custom_container">
         <FaqTabs/>
         <Q/>
-      </div>
         </main>
+      </div>
   );
 };
 

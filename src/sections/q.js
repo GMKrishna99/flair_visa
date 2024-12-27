@@ -15,42 +15,44 @@ const AbroadEducationBanner = () => {
 
     return (
         <div
-            className="flex flex-col md:flex-row items-center justify-between bg-white rounded-lg p-8 h-auto mx-auto mb-10 shadow-lg"
-            data-aos="fade-up"
+        className="flex flex-col md:flex-row items-center justify-between bg-white rounded-lg p-8 h-auto mx-auto mb-10 shadow-lg"
+        data-aos="fade-up"
+    >
+        {/* Question Mark Image */}
+        <div
+            className="hidden md:block flex-shrink-0 mb-6 md:mb-0"
+            data-aos="fade-right"
         >
-            {/* Question Mark Image */}
-            <div
-                className="flex-shrink-0 mb-6 md:mb-0"
-                data-aos="fade-right"
-            >
-                <img
-                    src={img}
-                    alt="Question Mark"
-                    className="w-32 h-32 object-contain"
-                />
-            </div>
-
-            {/* Text Content */}
-            <div
-                className="flex-1 px-6 mb-6 md:mb-0"
-                data-aos="fade-left"
-            >
-                <p className="text-blue-700 font-semibold text-lg mb-2 sm:text-base">
-                    Not Sure Where to Begin?
-                </p>
-                <h2 className="text-blue-700 font-bold text-2xl md:text-xl sm:text-lg">
-                    Want to know more about Abroad Education?
-                </h2>
-            </div>
-
-            {/* Button */}
-            <button
-                className="bg-primary_color text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-800 transition shadow-lg"
-                data-aos="zoom-in"
-            >
-                Get Free Counseling
-            </button>
+            <img
+                src={img}
+                alt="Question Mark"
+                className="w-32 h-32 object-contain"
+            />
         </div>
+    
+        {/* Text Content */}
+        <div
+            className="flex-1 px-6 mb-6 md:mb-0"
+            data-aos="fade-left"
+        >
+            <p className="text-blue-700 font-semibold text-lg sm:text-sm mb-2">
+                Not Sure Where to Begin?
+            </p>
+            <h2 className="text-blue-700 font-bold text-2xl sm:text-lg md:text-xl">
+                Want to know more about Abroad Education?
+            </h2>
+        </div>
+    
+        {/* Button */}
+        <button
+            className="bg-primary_color text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-800 transition shadow-lg"
+            data-aos="zoom-in"
+        >
+            Get Free Counseling
+        </button>
+    </div>
+    
+    
     );
 };
 
