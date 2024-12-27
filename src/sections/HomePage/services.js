@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import Heading from "../components/Heading";
-import { studentServices } from "../constants/StudenServices";
+import Heading from "../../components/Heading";
+import { studentServices } from "../../constants/StudenServices";
 import { FaChevronRight } from "react-icons/fa";
 import Aos from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles

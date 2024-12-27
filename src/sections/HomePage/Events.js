@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from "react";
-import Heading from "../components/Heading";
-import Button from "../components/Button";
+import Heading from "../../components/Heading";
+import Button from "../../components/Button";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-import { eventsData } from "../constants/Events";
+import { eventsData } from "../../constants/Events";
 import { CiCalendar } from "react-icons/ci";
 import Aos from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles

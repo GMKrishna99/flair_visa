@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { newsData } from "../constants/NewsUpdates.constance"; // Import your newsData
+import { newsData } from "../../constants/NewsUpdates.constance"; // Import your newsData
 import { BeatLoader } from "react-spinners";
 import Aos from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles

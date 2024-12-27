@@ -2,8 +2,8 @@ import Banner from "../components/Banner";
 import ContactUsBanner from "../assets/banners/contact_banner.png";
 import "react-phone-input-2/lib/style.css";
 import MapComponent from "../components/MapComponent";
-import OurBranchesSlide from "../sections/OurBranchesSlide";
-import ContactForm from "../sections/ContactForm";
+import OurBranchesSlide from "../sections/ContactPage/OurBranchesSlide";
+import ContactForm from "../sections/ContactPage/ContactForm";
 import MapBakground from "../assets/map_contact.svg";
 
 const ContactUs = () => {

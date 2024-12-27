@@ -4,6 +4,7 @@ import MainLayout from "../../src/MainLayout";
 import Home from "../pages/Home";
 import About from "../pages/AboutUs";
 import ContactUs from "../pages/ContactUs";
+import StudyAbroadUSA from "../pages/Study.Abroad.USA";
 
 const AppRoutes = () => {
   return useRoutes([
@@ -21,6 +22,10 @@ const AppRoutes = () => {
         {
           path: "/contact-us",
           element: <ContactUs />,
+        },
+        {
+          path: "/study-abroad/usa",
+          element: <StudyAbroadUSA />,
         },
       ],
     },

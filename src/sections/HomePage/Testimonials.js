@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import Heading from "../components/Heading";
-import Button from "../components/Button";
+import Heading from "../../components/Heading";
+import Button from "../../components/Button";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
-import { ratingsData } from "../constants/Rating"; // Ensure the path is correct
+import { ratingsData } from "../../constants/Rating"; // Ensure the path is correct
 import Aos from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles
 

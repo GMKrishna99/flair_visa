@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import Heading from "../components/Heading";
-import AboutImg from "../assets/about.png";
+import Heading from "../../components/Heading";
+import AboutImg from "../../assets/about.png";
 import CountUp from "react-countup"; // Import CountUp
-import { ReactCountUp } from "../constants/CountUp"; // Import ReactCountUp from constants
+import { ReactCountUp } from "../../constants/CountUp"; // Import ReactCountUp from constants
 import Aos from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Heading from "../components/Heading";
+import Heading from "../../components/Heading";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import PhoneInput from "react-phone-input-2";
 import AOS from "aos";
