@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import About from "../pages/AboutUs";
 import ContactUs from "../pages/ContactUs";
 import StudyAbroadUSA from "../pages/Study.Abroad.USA";
+import FAQ from "../sections/HomePage/Faq";
 
 const AppRoutes = () => {
   return useRoutes([
@@ -26,6 +27,10 @@ const AppRoutes = () => {
         {
           path: "/study-abroad/usa",
           element: <StudyAbroadUSA />,
+        },
+        {
+          path: "/faq",
+          element: <FAQ />,
         },
       ],
     },
