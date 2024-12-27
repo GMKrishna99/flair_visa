@@ -1,17 +1,43 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { howWeWorkSteps } from "../constants/HowWeWorks";
 import Description from "../constants/description";
 import Heading from "../components/Heading";
-import AOS from "aos";
-import "aos/dist/aos.css"; // Import AOS styles
+import "aos/dist/aos.css"; // Import AOS styles if needed
 
 const StepperWithImage = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [completed, setCompleted] = useState(false); // Track if steps are completed
+  const [isVisible, setIsVisible] = useState(false); // Track if section is visible
+  const sectionRef = useRef(null); // Reference to the section
 
-  // Auto progress through the steps
+  // Intersection Observer to track visibility of the section
   useEffect(() => {
-    if (completed) return; // Prevent further updates if steps are completed
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      {
+        root: null, // Default to viewport
+        threshold: 0.1, // Trigger when 10% of the section is visible
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  // Auto progress through the steps when the section is visible
+  useEffect(() => {
+    if (!isVisible || completed) return; // Only start animation if visible and not completed
 
     const interval = setInterval(() => {
       setCurrentStep((prevStep) => {
@@ -22,32 +48,23 @@ const StepperWithImage = () => {
         setCompleted(true); // Mark the steps as completed
         return prevStep;
       });
-    }, 3500); // Change step every 3 seconds (adjust as needed)
+    }, 3500); // Change step every 3.5 seconds
 
     return () => clearInterval(interval); // Clean up interval on unmount
-  }, [howWeWorkSteps.length, completed]);
+  }, [isVisible, completed]);
 
+  // Reset the stepper after completion
   useEffect(() => {
     if (completed) {
-      // Reset the stepper automatically once completed
       setTimeout(() => {
         setCurrentStep(0); // Reset steps to the first one
-        setCompleted(false); // Reset completed flag to start again
-      }, 0); // No delay
+        setCompleted(false); // Reset completed flag
+      }, 5000); // Delay before resetting
     }
   }, [completed]);
 
-  // Initialize AOS
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      once: true, // Whether animation should happen only once
-    });
-    return () => AOS.refresh(); // Cleanup AOS on unmount
-  }, []);
-
   return (
-    <section className="py-8 px-6 md:px-2">
+    <section ref={sectionRef} className="py-8 px-6 md:px-2">
       <div className="flex flex-col px-6 py-10 sm:px-20 sm:py-10 bg-white rounded-xl shadow-lg">
         <div className="w-full flex items-center justify-between">
           <Heading
@@ -62,7 +79,10 @@ const StepperWithImage = () => {
         <div className="relative mt-8 sm:mt-10 flex flex-col items-center sm:items-start w-full max-w-screen-xl">
           <div className="flex flex-col sm:flex-row w-full items-center sm:justify-evenly">
             {/* Step Content */}
-            <div className="w-full sm:w-2/3 flex flex-col items-center sm:items-start">
+            <div
+              className="w-full sm:w-2/3 flex flex-col items-center sm:items-start"
+              data-aos="fade-up"
+            >
               {howWeWorkSteps.map((step, index) => (
                 <div
                   key={index}
@@ -71,8 +91,6 @@ const StepperWithImage = () => {
                       ? "opacity-100"
                       : "opacity-50"
                   }`}
-                  data-aos="fade-up" // Add AOS animation (fade-up)
-                  // data-aos-delay={index * 200} // Delay each step by a little
                 >
                   {/* Vertical Connecting Line */}
                   {index !== howWeWorkSteps.length - 1 && (
@@ -148,12 +166,11 @@ const StepperWithImage = () => {
               <div
                 key={currentStep} // Ensure we only render one image at a time
                 className={`transition-opacity duration-1000 ease-in-out`}
-                data-aos="fade-left" // Add AOS animation (fade-left)
               >
                 <img
                   src={howWeWorkSteps[currentStep].vectorIcon}
                   alt={howWeWorkSteps[currentStep].title}
-                  className="w-3/4 object-contain" // Ensure the image fits within the container and occupies 100% width
+                  className="w-full object-cover" // Ensure the image fits within the container
                 />
               </div>
             </div>
