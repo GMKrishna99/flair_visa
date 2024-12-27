@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
-import Heading from "../components/Heading";
-import { universities } from "../constants/University";
-import Button from "../components/Button";
+import Heading from "../../components/Heading";
+import { universities } from "../../constants/University";
+import Button from "../../components/Button";
 import Aos from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles
 

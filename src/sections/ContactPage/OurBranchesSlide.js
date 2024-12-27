@@ -1,7 +1,7 @@
 import { HiOutlineLocationMarker, HiOutlinePhone } from "react-icons/hi";
-import { OurBranches } from "../constants/OurBranches";
+import { OurBranches } from "../../constants/OurBranches";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-import Heading from "../components/Heading";
+import Heading from "../../components/Heading";
 import { useRef, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";

@@ -1,18 +1,18 @@
 import React, { useEffect } from "react";
 import HomeBanner from "../assets/banners/home_banner.png";
 import Banner from "../components/Banner";
-import About from "../sections/About";
-import Services from "../sections/services";
-import TopRatedUniversities from "../sections/TopRatedUniversities";
-import Testimonials from "../sections/Testimonials";
-import Events from "../sections/Events";
-import Faq from "../sections/Faq";
-import NewsUpdates from "../sections/NewsUpdates";
+import About from "../sections/HomePage/About";
+import Services from "../sections/HomePage/services";
+import TopRatedUniversities from "../sections/HomePage/TopRatedUniversities";
+import Testimonials from "../sections/HomePage/Testimonials";
+import Events from "../sections/HomePage/Events";
+import Faq from "../sections/HomePage/Faq";
+import NewsUpdates from "../sections/HomePage/NewsUpdates";
 import Button from "../components/Button";
 import Aos from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles
-import BuildingsSvg from "../assets/buildings.svg";
-import HowWeWorks from "../sections/HowWeWorks";
+// import BuildingsSvg from "../assets/buildings.svg";
+import HowWeWorks from "../sections/HomePage/HowWeWorks";
 
 const Home = () => {
   // Initialize AOS when the component mounts
@@ -45,7 +45,6 @@ const Home = () => {
       <div className="custom_container">
         {/* About Us Section */}
         <About />
-
         {/* Services Section */}
         <Services />
 

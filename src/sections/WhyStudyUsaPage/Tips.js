@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
-import { howWeWorkSteps } from "../constants/HowWeWorks";
-import Description from "../constants/description";
-import Heading from "../components/Heading";
+import { howWeWorkSteps } from "../../constants/HowWeWorks"; // Assuming this is an array of step data
+import Description from "../../constants/description";
+import Heading from "../../components/Heading";
 import "aos/dist/aos.css"; // Import AOS styles if needed
+import TipsImage from "../../assets/howew.png";
 
 const StepperWithImage = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -65,7 +66,7 @@ const StepperWithImage = () => {
 
   return (
     <section ref={sectionRef} className="py-8 px-6 md:px-2">
-      <div className="flex flex-col px-6 py-10 sm:px-20 sm:py-10 bg-white rounded-xl shadow-lg">
+      <div className="flex flex-col px-6 py-10 sm:px-20 sm:py-10 ">
         <div className="w-full flex items-center justify-between">
           <Heading
             number={"03"}
@@ -140,7 +141,7 @@ const StepperWithImage = () => {
                       {step.step}
                     </h3>
                     <h3
-                      className={`text- font-semibold transition-opacity duration-1000 ${
+                      className={`text-xl font-semibold transition-opacity duration-1000 ${
                         index === currentStep || completed
                           ? "opacity-100 text-black"
                           : "opacity-30"
@@ -161,16 +162,15 @@ const StepperWithImage = () => {
               ))}
             </div>
 
+            {/* Static Image Section */}
             <div className="w-full sm:w-1/2 justify-center items-center p-10 mt-8 sm:mt-0 hidden md:flex">
-              {/* Render only the current step's image */}
-              <div
-                key={currentStep} // Ensure we only render one image at a time
-                className={`transition-opacity duration-1000 ease-in-out`}
-              >
+              <div className="transition-opacity duration-1000 ease-in-out">
+                {/* Replace this with the static image you'd like to use */}
                 <img
-                  src={howWeWorkSteps[currentStep].vectorIcon}
-                  alt={howWeWorkSteps[currentStep].title}
+                  src={TipsImage} // Path to your static image
+                  alt="How We Work"
                   className="w-full object-cover" // Ensure the image fits within the container
+                  data-aos="fade-up"
                 />
               </div>
             </div>
