@@ -6,7 +6,7 @@ import About from "../pages/AboutUs";
 import ContactUs from "../pages/ContactUs";
 import StudyAbroadUSA from "../pages/Study.Abroad.USA";
 import FAQ from "../sections/HomePage/Faq";
-
+import News from "../pages/News";
 const AppRoutes = () => {
   return useRoutes([
     {
@@ -31,6 +31,10 @@ const AppRoutes = () => {
         {
           path: "/faq",
           element: <FAQ />,
+        },
+        {
+          path: "/news",
+          element: <News />,
         },
       ],
     },
