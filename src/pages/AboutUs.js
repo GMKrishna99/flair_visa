@@ -34,8 +34,8 @@ const AboutUs = () => {
     // Initialize AOS
     AOS.init({
       duration: 1200, // Animation duration
-      offset: 200, // Trigger when the element is 200px from the viewport
-      once: true, // Animation occurs only once while scrolling
+      offset: 200,    // Trigger when the element is 200px from the viewport
+      once: true,     // Animation occurs only once while scrolling
     });
 
     // Refresh AOS on scroll to ensure animations trigger when reaching the section
@@ -83,11 +83,7 @@ const AboutUs = () => {
             <div className="flex-1" data-aos="fade-right">
               <Heading number={"01"} />
               {/* Who We Are.? */}
-              <Heading
-                text="Who We Are.?"
-                data-aos="fade-up"
-                className="mt-4"
-              />
+              <Heading text="Who We Are.?" data-aos="fade-up" className="mt-4" />
               <Description
                 text="Choose Flairvisa Abroad Education Consultants for your path to
       success! Our dedicated team provides personalized guidance to
@@ -104,10 +100,7 @@ const AboutUs = () => {
               />
             </div>
             {/* Illustration Section */}
-            <div
-              className="flex-1 flex justify-center items-center"
-              data-aos="fade-left"
-            >
+            <div className="flex-1 flex justify-center items-center" data-aos="fade-left">
               <img
                 src={WhoWeAreImg}
                 alt="Illustration"
@@ -115,6 +108,7 @@ const AboutUs = () => {
               />
             </div>
           </div>
+
         </section>
 
         <div>
@@ -123,7 +117,10 @@ const AboutUs = () => {
           <section className="py-10 px-5 md:px-16 lg:px-24">
             <div className="flex flex-col md:flex-row items-center gap-8">
               {/* Image Container */}
-              <div className="flex-1 order-2 md:order-1" data-aos="fade-right">
+              <div
+                className="flex-1 order-2 md:order-1"
+                data-aos="fade-right"
+              >
                 <img
                   src={WhyChooseUs}
                   alt="Illustration"
@@ -158,9 +155,8 @@ const AboutUs = () => {
                     {slides.map((_, index) => (
                       <div
                         key={index}
-                        className={`w-3.5 h-3.5 rounded-full ${
-                          index === currentSlide ? "bg-red-500" : "bg-gray-300"
-                        }`}
+                        className={`w-3.5 h-3.5 rounded-full ${index === currentSlide ? "bg-red-500" : "bg-gray-300"
+                          }`}
                       ></div>
                     ))}
                   </div>
@@ -200,11 +196,7 @@ const AboutUs = () => {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-1" data-aos="fade-right">
                 <Heading number={"03"} />
-                <Heading
-                  text="Our Promise"
-                  className="mt-4"
-                  data-aos="fade-up"
-                />
+                <Heading text="Our Promise" className="mt-4" data-aos="fade-up" />
                 <Description
                   text="Your dreams are our priority,  we’re more than consultants—we’re
  partners in making your aspirations a reality."
@@ -217,19 +209,15 @@ const AboutUs = () => {
                   {steps.map((step, index) => (
                     <div
                       key={index}
-                      className={`flex items-start relative pb-12 ${
-                        index <= currentStep ? "opacity-100" : "opacity-50"
-                      } transition-opacity duration-500`}
+                      className={`flex items-start relative pb-12 ${index <= currentStep ? "opacity-100" : "opacity-50"
+                        } transition-opacity duration-500`}
                       data-aos="fade-up"
                     >
                       {/* Vertical Connecting Line */}
                       {index !== steps.length - 1 && (
                         <div
-                          className={`absolute left-[20px] top-[20px] h-full ${
-                            index < currentStep
-                              ? "border-green-500"
-                              : "border-gray-300"
-                          } border-l-2`}
+                          className={`absolute left-[20px] top-[20px] h-full ${index < currentStep ? "border-green-500" : "border-gray-300"
+                            } border-l-2`}
                           data-aos="fade-up"
                         ></div>
                       )}
@@ -240,23 +228,17 @@ const AboutUs = () => {
                         data-aos="zoom-in"
                       >
                         <div
-                          className={`w-10 h-10 rounded-full border-2 ${
-                            index <= currentStep
-                              ? "border-green-500 border-dashed"
-                              : "border-gray-300"
-                          } flex items-center justify-center`}
+                          className={`w-10 h-10 rounded-full border-2 ${index <= currentStep
+                            ? "border-green-500 border-dashed"
+                            : "border-gray-300"
+                            } flex items-center justify-center`}
                         >
                           <div
-                            className={`w-5 h-5 ${
-                              index <= currentStep
-                                ? "bg-green-500"
-                                : "bg-gray-300"
-                            } rounded-full flex items-center justify-center`}
+                            className={`w-5 h-5 ${index <= currentStep ? "bg-green-500" : "bg-gray-300"
+                              } rounded-full flex items-center justify-center`}
                           >
                             {index <= currentStep && (
-                              <span className="text-white text-sm font-bold">
-                                ✓
-                              </span>
+                              <span className="text-white text-sm font-bold">✓</span>
                             )}
                           </div>
                         </div>
@@ -265,11 +247,8 @@ const AboutUs = () => {
                       {/* Step Content */}
                       <div className="ml-8" data-aos="fade-left">
                         <h3
-                          className={`text-lg font-semibold ${
-                            index <= currentStep
-                              ? "text-black"
-                              : "text-gray-500"
-                          }`}
+                          className={`text-lg font-semibold ${index <= currentStep ? "text-black" : "text-gray-500"
+                            }`}
                         >
                           {step.label}
                         </h3>
@@ -293,11 +272,7 @@ const AboutUs = () => {
             </div>
           </section>
           <section className="py-14 px-6 md:px-12">
-            <div
-              className="items-center gap-8"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-            >
+            <div className="items-center gap-8" data-aos="fade-up" data-aos-duration="1200">
               {/* Section Header */}
               <Heading number={"04"} />
               <Heading
@@ -376,23 +351,14 @@ const AboutUs = () => {
           <section className="py-10 px-4 md:px-8" data-aos="fade-up">
             <div className="mb-6" data-aos="fade-right" data-aos-delay="200">
               <Heading number={"05"} />
-              <Heading
-                text="Application Guide"
-                className="mt-4"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              />
+              <Heading text="Application Guide" className="mt-4" data-aos="fade-up" data-aos-delay="300" />
               <Description
                 text="From start to finish, we ensure every detail of your application is handled with precision, providing you with a seamless and stress-free experience."
                 data-aos="fade-up"
                 data-aos-delay="400"
               />
             </div>
-            <div
-              className="mt-6 md:ml-6"
-              data-aos="fade-left"
-              data-aos-delay="500"
-            >
+            <div className="mt-6 md:ml-6" data-aos="fade-left" data-aos-delay="500">
               <img
                 src={groupimg}
                 alt="Illustration"
@@ -400,6 +366,7 @@ const AboutUs = () => {
               />
             </div>
           </section>
+
         </div>
       </div>
     </main>
