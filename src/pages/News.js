@@ -4,6 +4,7 @@ import NewsBanner from "../assets/banners/news_banner.png";
 import { BeatLoader } from "react-spinners";
 import { newsData } from "../constants/NewsUpdates.constance";
 import Aos from "aos";
+import "aos/dist/aos.css";
 
 const News = () => {
   const countries = [
