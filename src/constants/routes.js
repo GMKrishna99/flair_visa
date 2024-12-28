@@ -5,7 +5,7 @@ import Home from "../pages/Home";
 import About from "../pages/AboutUs";
 import ContactUs from "../pages/ContactUs";
 import StudyAbroadUSA from "../pages/Study.Abroad.USA";
-import FAQ from "../sections/HomePage/Faq";
+import FAQ from "../pages/FAQ’s";
 
 const AppRoutes = () => {
   return useRoutes([
