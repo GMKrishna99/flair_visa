@@ -41,7 +41,7 @@ const App = () => {
     );
 
     return (
-        <div className="flex flex-col md:flex-row h-auto md:h-[500px] bg-white mb-10 mt-20 rounded-[14px] shadow-lg">
+        <div className="flex flex-col md:flex-row h-auto  bg-white mb-10 mt-20 rounded-[14px] shadow-lg">
             {/* Sidebar */}
             <aside
                 className="w-full md:w-1/4 lg:w-1/5 bg-white border-b md:border-r border-gray-200 rounded-[14px] shadow-md"
