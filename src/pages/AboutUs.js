@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import aboutBanner from "../assets/banners/about_banner.png";
 import SubHeader from "../constants/sub";
 import WhoWeAreImg from "../assets/undraw_work-time_zbsw 1.png";
@@ -20,9 +20,35 @@ import "aos/dist/aos.css";
 
 const AboutUs = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
+  const [isVisible, setIsVisible] = useState(false); // Track if section is visible
+   const sectionRef = useRef(null); // Reference to the section
+   const intervalRef = useRef(null);
   // Auto-scroll logic
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        },
+        {
+          root: null, // Default to viewport
+          threshold: 0.1, // Trigger when 10% of the section is visible
+        }
+      );
+  
+      if (sectionRef.current) {
+        observer.observe(sectionRef.current);
+      }
+  
+      return () => {
+        if (sectionRef.current) {
+          observer.unobserve(sectionRef.current);
+        }
+      };
+    }, []);
   useEffect(() => {
+    
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length); // Loop through slides
     }, 3000); // Change slide every 3 seconds
@@ -34,7 +60,7 @@ const AboutUs = () => {
     // Initialize AOS
     AOS.init({
       duration: 1200, // Animation duration
-      offset: 200,    // Trigger when the element is 200px from the viewport
+      // offset: 200,    // Trigger when the element is 200px from the viewport
       once: true,     // Animation occurs only once while scrolling
     });
 
@@ -53,18 +79,55 @@ const AboutUs = () => {
 
   // Auto progress through the steps
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentStep((prevStep) => {
-        if (prevStep < steps.length - 1) {
-          return prevStep + 1;
-        }
-        clearInterval(interval); // Stop when we reach the last step
-        return prevStep;
-      });
-    }, 3000); // Change step every 3 seconds (adjust as needed)
+    const startInterval = () => {
+      intervalRef.current = setInterval(() => {
+        setCurrentStep((prevStep) => {
+          if (prevStep < steps.length - 1) {
+            return prevStep + 1;
+          }
+          clearInterval(intervalRef.current); // Stop the interval once the last step is reached
+          return prevStep;
+        });
+      }, 1500); // Change step every 3 seconds
+    };
 
-    return () => clearInterval(interval); // Clean up interval on unmount
-  }, [currentStep, steps.length]);
+    const stopInterval = () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log("Section in view, starting interval.");
+          startInterval(); // Start the interval when the section is visible
+        } else {
+          console.log("Section out of view, stopping interval.");
+          stopInterval(); // Stop the interval when the section is out of view
+        }
+      });
+    };
+
+    const observerOptions = {
+      root: null, // Use the viewport as the root
+      threshold: 0.5, // Trigger when 50% of the section is visible
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+      stopInterval(); // Clean up the interval
+    };
+  }, [steps.length]);
 
   return (
     <main className="relative">
@@ -76,7 +139,7 @@ const AboutUs = () => {
           subtitle="We are dedicated to helping students turn their dreams of studying abroad into reality. "
         />
       </div>
-      <div className="custom_container">
+      <main className="custom_container">
         <section className="py-10 px-4 md:px-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Text Section */}
@@ -192,45 +255,35 @@ const AboutUs = () => {
               </div>
             </div>
           </section>
-          <section className="py-10 px-4 md:px-8" data-aos="fade-up">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="flex-1" data-aos="fade-right">
-                <Heading number={"03"} />
-                <Heading text="Our Promise" className="mt-4" data-aos="fade-up" />
-                <Description
-                  text="Your dreams are our priority,  we’re more than consultants—we’re
- partners in making your aspirations a reality."
-                  data-aos="fade-up"
-                />
-                <div
-                  className="relative mt-4 flex flex-col items-start"
-                  data-aos="fade-up"
-                >
+          <section className="py-10 px-4 md:px-8 w-full max-w-screen-xl "  ref={sectionRef} data-aos="fade-up">
+            <div className="relative mt-8 sm:mt-10 flex flex-col items-center sm:items-start">
+              <div className="flex flex-col sm:flex-row w-full items-center sm:justify-evenly">
+                {/* Step Content */}
+                <div className="w-full sm:w-2/3 flex flex-col items-center sm:items-start">
                   {steps.map((step, index) => (
                     <div
                       key={index}
-                      className={`flex items-start relative pb-12 ${index <= currentStep ? "opacity-100" : "opacity-50"
-                        } transition-opacity duration-500`}
-                      data-aos="fade-up"
+                      className={`flex items-start relative pb-12 w-full transition-all duration-1000 ease-in-out ${index === currentStep || index < currentStep
+                          ? "opacity-100"
+                          : "opacity-50"
+                        }`}
                     >
                       {/* Vertical Connecting Line */}
                       {index !== steps.length - 1 && (
                         <div
-                          className={`absolute left-[20px] top-[20px] h-full ${index < currentStep ? "border-green-500" : "border-gray-300"
+                          className={`absolute left-[20px] top-[20px] h-full ${index < currentStep
+                              ? "border-green-500"
+                              : "border-gray-300"
                             } border-l-2`}
-                          data-aos="fade-up"
                         ></div>
                       )}
 
                       {/* Step Circle */}
-                      <div
-                        className="relative flex items-center justify-center"
-                        data-aos="zoom-in"
-                      >
+                      <div className="relative flex items-center justify-center">
                         <div
                           className={`w-10 h-10 rounded-full border-2 ${index <= currentStep
-                            ? "border-green-500 border-dashed"
-                            : "border-gray-300"
+                              ? "border-green-500 border-dashed"
+                              : "border-gray-300"
                             } flex items-center justify-center`}
                         >
                           <div
@@ -245,32 +298,45 @@ const AboutUs = () => {
                       </div>
 
                       {/* Step Content */}
-                      <div className="ml-8" data-aos="fade-left">
+                      <div className="ml-8 w-full">
                         <h3
-                          className={`text-lg font-semibold ${index <= currentStep ? "text-black" : "text-gray-500"
+                          className={`text-lg font-semibold transition-opacity duration-1000 ${index === currentStep || index < currentStep
+                              ? "opacity-100 text-black"
+                              : "opacity-30"
                             }`}
                         >
                           {step.label}
                         </h3>
-                        <Description text={step.description} />
+                        <Description
+                          text={step.description}
+                          className={`transition-opacity duration-1000 ${index === currentStep || index < currentStep
+                              ? "opacity-100"
+                              : "opacity-0"
+                            }`}
+                        />
                       </div>
                     </div>
                   ))}
                 </div>
-              </div>
-              <div
-                className="flex-1 flex justify-center items-center"
-                data-aos="fade-left"
-              >
-                <img
-                  src={OurPromise}
-                  alt="Illustration"
-                  className="max-w-full h-auto"
-                  data-aos="zoom-in"
-                />
+
+                {/* Illustration */}
+                <div className="w-full sm:w-1/2 flex justify-center items-center p-10 mt-8 sm:mt-0 hidden md:flex">
+                  <div
+                    key={currentStep}
+                    className={`transition-opacity duration-1000 ease-in-out`}
+                  >
+                    <img
+                      src={OurPromise}
+                      alt="Our Promise"
+                      className="w-full object-cover"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </section>
+
+
           <section className="py-14 px-6 md:px-12">
             <div className="items-center gap-8" data-aos="fade-up" data-aos-duration="1200">
               {/* Section Header */}
@@ -368,7 +434,7 @@ const AboutUs = () => {
           </section>
 
         </div>
-      </div>
+      </main>
     </main>
   );
 };
