@@ -48,7 +48,7 @@ const News = () => {
 
       {/* Buttons for selecting country */}
       <div
-        className="flex justify-start mb-6 space-x-2 overflow-x-auto md:space-x-8 whitespace-nowrap scrollbar-hidden w-full"
+        className="flex xl:justify-center justify-normal mb-6 space-x-2 overflow-x-auto md:space-x-8 whitespace-nowrap scrollbar-hidden w-full"
         data-aos="fade-left"
       >
         {countries.map((country) => (
