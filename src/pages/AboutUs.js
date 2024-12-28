@@ -26,7 +26,7 @@ const AboutUs = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length); // Loop through slides
-    }, 3000); // Change slide every 3 seconds
+    }, 1500); // Change slide every 1.5 seconds
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
@@ -34,8 +34,8 @@ const AboutUs = () => {
   useEffect(() => {
     AOS.init({
       duration: 1200, // Animation duration
-      offset: 200,    // Trigger when the element is 120px from the viewport
-      once: false,    // Allow animations every time you scroll back to the element
+      offset: 200, // Trigger when the element is 120px from the viewport
+      once: false, // Allow animations every time you scroll back to the element
     });
   }, []);
   const [currentStep, setCurrentStep] = useState(0);
@@ -103,10 +103,7 @@ const AboutUs = () => {
         <section className="py-10 px-5 md:px-16 lg:px-24">
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Image Container */}
-            <div
-              className="flex-1 order-2 md:order-1"
-              data-aos="fade-right"
-            >
+            <div className="flex-1 order-2 md:order-1" data-aos="fade-right">
               <img
                 src={WhyChooseUs}
                 alt="Illustration"
@@ -120,15 +117,8 @@ const AboutUs = () => {
               data-aos="fade-left"
             >
               <Heading number={"02"} />
-              <Heading
-                text="Why Choose Us.?"
-                className="mt-4"
-                data-aos="fade-up"
-              />
-              <Description
-                text="We stand apart because of our unwavering commitment to your success."
-                data-aos="fade-up"
-              />
+              <Heading text="Why Choose Us.?" className="mt-4" />
+              <Description text="We stand apart because of our unwavering commitment to your success." />
               <div
                 className="flex flex-col md:flex-row items-center justify-center gap-6 mt-6"
                 data-aos="zoom-in"
@@ -141,8 +131,9 @@ const AboutUs = () => {
                   {slides.map((_, index) => (
                     <div
                       key={index}
-                      className={`w-3.5 h-3.5 rounded-full ${index === currentSlide ? "bg-red-500" : "bg-gray-300"
-                        }`}
+                      className={`w-3.5 h-3.5 rounded-full ${
+                        index === currentSlide ? "bg-red-500" : "bg-gray-300"
+                      }`}
                     ></div>
                   ))}
                 </div>
@@ -189,23 +180,22 @@ const AboutUs = () => {
  partners in making your aspirations a reality."
                 data-aos="fade-up"
               />
-              <div
-                className="relative mt-4 flex flex-col items-start"
-                data-aos="fade-up"
-              >
+              <div className="relative mt-4 flex flex-col items-start">
                 {steps.map((step, index) => (
                   <div
                     key={index}
-                    className={`flex items-start relative pb-12 ${index <= currentStep ? "opacity-100" : "opacity-50"
-                      } transition-opacity duration-500`}
-                    data-aos="fade-up"
+                    className={`flex items-start relative pb-12 ${
+                      index <= currentStep ? "opacity-100" : "opacity-50"
+                    } transition-opacity duration-500`}
                   >
                     {/* Vertical Connecting Line */}
                     {index !== steps.length - 1 && (
                       <div
-                        className={`absolute left-[20px] top-[20px] h-full ${index < currentStep ? "border-green-500" : "border-gray-300"
-                          } border-l-2`}
-                        data-aos="fade-up"
+                        className={`absolute left-[20px] top-[20px] h-full ${
+                          index < currentStep
+                            ? "border-green-500"
+                            : "border-gray-300"
+                        } border-l-2`}
                       ></div>
                     )}
 
@@ -215,17 +205,23 @@ const AboutUs = () => {
                       data-aos="zoom-in"
                     >
                       <div
-                        className={`w-10 h-10 rounded-full border-2 ${index <= currentStep
-                          ? "border-green-500 border-dashed"
-                          : "border-gray-300"
-                          } flex items-center justify-center`}
+                        className={`w-10 h-10 rounded-full border-2 ${
+                          index <= currentStep
+                            ? "border-green-500 border-dashed"
+                            : "border-gray-300"
+                        } flex items-center justify-center`}
                       >
                         <div
-                          className={`w-5 h-5 ${index <= currentStep ? "bg-green-500" : "bg-gray-300"
-                            } rounded-full flex items-center justify-center`}
+                          className={`w-5 h-5 ${
+                            index <= currentStep
+                              ? "bg-green-500"
+                              : "bg-gray-300"
+                          } rounded-full flex items-center justify-center`}
                         >
                           {index <= currentStep && (
-                            <span className="text-white text-sm font-bold">✓</span>
+                            <span className="text-white text-sm font-bold">
+                              ✓
+                            </span>
                           )}
                         </div>
                       </div>
@@ -234,8 +230,9 @@ const AboutUs = () => {
                     {/* Step Content */}
                     <div className="ml-8" data-aos="fade-left">
                       <h3
-                        className={`text-lg font-semibold ${index <= currentStep ? "text-black" : "text-gray-500"
-                          }`}
+                        className={`text-lg font-semibold ${
+                          index <= currentStep ? "text-black" : "text-gray-500"
+                        }`}
                       >
                         {step.label}
                       </h3>
@@ -260,7 +257,11 @@ const AboutUs = () => {
         </section>
 
         <section className="py-14 px-6 md:px-12">
-          <div className="items-center gap-8" data-aos="fade-up" data-aos-duration="1200">
+          <div
+            className="items-center gap-8"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+          >
             {/* Section Header */}
             <Heading number={"04"} />
             <Heading
@@ -339,14 +340,23 @@ const AboutUs = () => {
         <section className="py-10 px-4 md:px-8" data-aos="fade-up">
           <div className="mb-6" data-aos="fade-right" data-aos-delay="200">
             <Heading number={"05"} />
-            <Heading text="Application Guide" className="mt-4" data-aos="fade-up" data-aos-delay="300" />
+            <Heading
+              text="Application Guide"
+              className="mt-4"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            />
             <Description
               text="From start to finish, we ensure every detail of your application is handled with precision, providing you with a seamless and stress-free experience."
               data-aos="fade-up"
               data-aos-delay="400"
             />
           </div>
-          <div className="mt-6 md:ml-6" data-aos="fade-left" data-aos-delay="500">
+          <div
+            className="mt-6 md:ml-6"
+            data-aos="fade-left"
+            data-aos-delay="500"
+          >
             <img
               src={groupimg}
               alt="Illustration"
@@ -354,7 +364,6 @@ const AboutUs = () => {
             />
           </div>
         </section>
-
       </div>
     </div>
   );

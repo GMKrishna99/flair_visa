@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Header = () => {
-  const googleMapUrl = `https://maps.app.goo.gl/xSUR2c19Akd3ZV6t6`;
+  const googleMapUrl = `https://maps.app.goo.gl/3x9WUxXmR5FMsdb77`;
 
   // Initialize AOS on component mount
   useEffect(() => {
@@ -25,7 +25,7 @@ const Header = () => {
         <a href="mailto:someone@example.com" className="flex items-center">
           <IoMailOpenOutline className="text-primary_color h-5 w-5" />
           <span className="text-header_text_color ml-2 text-sm">
-            info@flairvisa.com
+            info@flairtechnologies.in
           </span>
         </a>
         <a
@@ -36,8 +36,7 @@ const Header = () => {
         >
           <FaLocationDot className="text-primary_color h-5 w-5" />
           <span className="text-header_text_color ml-2 text-sm">
-            918, 8th floor, VASAVI MPM Grand, Besides Ameerpet Metro Station,
-            Hyderabad, 500073
+            05, Vivekananda Layout, Marathahalli, Bangalore, Karnataka – 560037,
           </span>
         </a>
       </div>

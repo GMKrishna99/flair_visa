@@ -28,7 +28,7 @@ const News = () => {
     setSelectedCountry(country);
     setTimeout(() => {
       setLoading(false); // Stop loading after a brief delay (for the sake of the animation)
-    }, 800); // Adjust the delay based on the data processing time
+    }, 500); // Adjust the delay based on the data processing time
   };
 
   const filteredNews = newsData.filter(
@@ -48,7 +48,7 @@ const News = () => {
 
       {/* Buttons for selecting country */}
       <div
-        className="flex justify-center mb-6 space-x-4 overflow-x-auto md:space-x-8 whitespace-nowrap scrollbar-hidden"
+        className="flex justify-start mb-6 space-x-2 overflow-x-auto md:space-x-8 whitespace-nowrap scrollbar-hidden w-full"
         data-aos="fade-left"
       >
         {countries.map((country) => (
@@ -69,7 +69,7 @@ const News = () => {
       {/* Loader */}
       {loading ? (
         <div className="flex justify-center items-center h-64">
-          <BeatLoader color="#E20835" />
+          <BeatLoader color="#0A5CA5" />
         </div>
       ) : (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -93,12 +93,12 @@ const News = () => {
               <div className="flex flex-col w-full lg:w-2/3 pr-6 p-4">
                 <div className="flex items-center gap-3">
                   {/* Article Country */}
-                  <span className="text-sm mb-2 bg-slate-200 text-black px-4 py-2 rounded-full">
+                  <span className="text-sm mb-2 bg-primary_color text-white font-semibold px-4 py-2 rounded-full">
                     {item.country}
                   </span>
 
                   {/* Article Date */}
-                  <span className="text-sm mb-2 bg-slate-200 text-black px-4 py-2 rounded-full">
+                  <span className="text-sm mb-2 bg-primary_color text-white font-semibold px-4 py-2 rounded-full">
                     {item.date}
                   </span>
                 </div>
