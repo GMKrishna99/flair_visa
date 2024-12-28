@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-sans bg-bg_color;
+  @apply font-sans bg-bg_color overflow-x-hidden w-full h-full;
 }
 
 @layer components {

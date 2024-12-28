@@ -1,14 +1,40 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { FooterLinks } from "../constants/FooterLinks";
 import FooterLogo from "../assets/logo.png";
 import Aos from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles
+import { FaArrowUp } from "react-icons/fa"; // Import Chevron Up icon
 
 const Footer = () => {
+  const [showButton, setShowButton] = useState(false);
+
   // Initialize AOS when the component mounts
   useEffect(() => {
     Aos.init({ duration: 1000, once: true });
+
+    // Function to handle scroll event
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowButton(true); // Show button if scrolled down 300px
+      } else {
+        setShowButton(false); // Hide button when scrolled back to top
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up event listener
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Function to scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scroll effect
+    });
+  };
 
   return (
     <footer className="text-[#0656A2] bg-white">
@@ -84,6 +110,17 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Back to Top Button */}
+      {showButton && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-28 right-8 bg-primary_color text-white p-3 rounded-full shadow-lg hover:bg-[#0656A2] transition-all duration-300 ease-in-out"
+          aria-label="Back to Top"
+        >
+          <FaArrowUp className="h-6 w-6" />
+        </button>
+      )}
     </footer>
   );
 };

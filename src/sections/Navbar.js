@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navbarRef}
-      className="lg:px-9 xl:px-32 px-4 py-4 flex justify-between items-center w-full "
+      className="lg:px-9 xl:px-22 px-4 py-4 flex justify-between items-center w-full "
     >
       <a
         href="/"

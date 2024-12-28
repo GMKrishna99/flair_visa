@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <div
-      className="w-full bg-header_color py-4 px-4 sm:px-6 lg:px-9 xl:px-32 hidden md:flex md:items-center lg:justify-between md:justify-center"
+      className="w-full bg-header_color py-4 px-4 sm:px-6 lg:px-9 xl:px-22 hidden md:flex md:items-center lg:justify-between md:justify-center"
       data-aos="fade-in"
     >
       <div className="lg:flex xl:gap-40 gap-10 hidden" data-aos="fade-right">
