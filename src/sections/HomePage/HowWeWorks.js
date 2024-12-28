@@ -48,7 +48,7 @@ const StepperWithImage = () => {
         setCompleted(true); // Mark the steps as completed
         return prevStep;
       });
-    }, 3500); // Change step every 3.5 seconds
+    }, 1500); // Change step every 1 seconds
 
     return () => clearInterval(interval); // Clean up interval on unmount
   }, [isVisible, completed]);
