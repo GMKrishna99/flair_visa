@@ -36,7 +36,7 @@ const News = () => {
   );
 
   return (
-    <section className="py-8 px-6 md:px-8 lg:px-16">
+    <section className="relative overflow-hidden py-8 px-6 md:px-8 lg:px-16">
       <div className="text-center mb-8" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-gray-800">
           Latest News & Updates
@@ -48,7 +48,7 @@ const News = () => {
 
       {/* Buttons for selecting country */}
       <div
-        className="flex xl:justify-center justify-normal mb-6 space-x-2 overflow-x-auto md:space-x-8 whitespace-nowrap scrollbar-hidden w-full"
+        className="flex xl:justify-center justify-start mb-6 gap-4 overflow-x-auto whitespace-nowrap scrollbar-hidden"
         data-aos="fade-left"
       >
         {countries.map((country) => (
