@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { howWeWorkSteps } from "../../constants/HowWeWorks"; // Assuming this is an array of step data
+import { Tips } from "../../constants/study_abroad_data/USA/Tips"; // Assuming this is an array of step data
 import Description from "../../constants/description";
 import Heading from "../../components/Heading";
 import "aos/dist/aos.css"; // Import AOS styles if needed
@@ -42,14 +42,14 @@ const StepperWithImage = () => {
 
     const interval = setInterval(() => {
       setCurrentStep((prevStep) => {
-        if (prevStep < howWeWorkSteps.length - 1) {
+        if (prevStep < Tips.length - 1) {
           return prevStep + 1;
         }
         clearInterval(interval); // Stop when we reach the last step
         setCompleted(true); // Mark the steps as completed
         return prevStep;
       });
-    }, 3500); // Change step every 3.5 seconds
+    }, 1500); // Change step every 1.5 seconds
 
     return () => clearInterval(interval); // Clean up interval on unmount
   }, [isVisible, completed]);
@@ -66,17 +66,14 @@ const StepperWithImage = () => {
 
   return (
     <section ref={sectionRef} className="py-8 px-6 md:px-2">
+      <Heading
+        number={"05"}
+        text={"Tips to Enhance Chances of Admission"}
+        subtext={"The commonly accepted tests include:"}
+        className="z-10 mb-4 sm:mb-8 text-center sm:text-left"
+      />
       <div className="flex flex-col px-6 py-10 sm:px-20 sm:py-10 ">
-        <div className="w-full flex items-center justify-between">
-          <Heading
-            number={"03"}
-            text={"How We Work"}
-            className="z-10 mb-4 sm:mb-8 text-center sm:text-left"
-          />
-          <span className="text-sm text-slate-400 block text-center sm:text-left">
-            Make Your first step the only step
-          </span>
-        </div>
+        <div className="w-full flex items-center justify-between"></div>
         <div className="relative mt-8 sm:mt-10 flex flex-col items-center sm:items-start w-full max-w-screen-xl">
           <div className="flex flex-col sm:flex-row w-full items-center sm:justify-evenly">
             {/* Step Content */}
@@ -84,7 +81,7 @@ const StepperWithImage = () => {
               className="w-full sm:w-2/3 flex flex-col items-center sm:items-start"
               data-aos="fade-up"
             >
-              {howWeWorkSteps.map((step, index) => (
+              {Tips.map((step, index) => (
                 <div
                   key={index}
                   className={`flex items-start relative pb-12 w-full transition-all duration-1000 ease-in-out ${
@@ -94,7 +91,7 @@ const StepperWithImage = () => {
                   }`}
                 >
                   {/* Vertical Connecting Line */}
-                  {index !== howWeWorkSteps.length - 1 && (
+                  {index !== Tips.length - 1 && (
                     <div
                       className={`absolute left-[20px] top-[20px] h-full ${
                         index < currentStep
@@ -131,15 +128,6 @@ const StepperWithImage = () => {
 
                   {/* Step Content */}
                   <div className="ml-8 w-full">
-                    <h3
-                      className={`text-lg font-semibold transition-opacity duration-1000 ${
-                        index === currentStep || completed
-                          ? "opacity-100 text-black"
-                          : "opacity-30"
-                      }`}
-                    >
-                      {step.step}
-                    </h3>
                     <h3
                       className={`text-xl font-semibold transition-opacity duration-1000 ${
                         index === currentStep || completed

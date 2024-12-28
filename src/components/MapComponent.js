@@ -25,7 +25,7 @@ const MapComponent = () => {
     <div className="py-12 relative">
       {/* Google Map iframe */}
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.2538638781334!2d80.42949318589943!3d16.309967892752866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a756675e36663%3A0xc13ccd31333054f1!2sMasters%20Visa%20Overseas%20Education%20Consultancy%20Guntur!5e0!3m2!1sen!2sin!4v1735200031871!5m2!1sen!2sin&zoom=1&gestureHandling=true"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.30292794408!2d77.6983200759312!3d12.952457615295993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1234dff56e3d%3A0x39b6f970c00e8208!2sFlair%20Technologies!5e0!3m2!1sen!2sin!4v1735363817185!5m2!1sen!2sin&zoom=1&gestureHandling=true"
         width="600"
         height="450"
         allowFullScreen=""
@@ -48,7 +48,10 @@ const MapComponent = () => {
           className="text-sm text-white mt-2 flex items-center pb-2"
         >
           <HiOutlineLocationMarker className="h-6 w-6" />
-          <span className="ml-2">Guntur, Andhra Pradesh, India</span>
+          <span className="ml-2">
+            {" "}
+            Marathahalli, Bengaluru, Karnataka 560037
+          </span>
         </a>
         <a
           href="tel:+1234567890"

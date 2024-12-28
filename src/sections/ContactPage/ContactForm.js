@@ -140,7 +140,7 @@ const ContactForm = () => {
               <div className="p-2 bg-primary_color text-white rounded-full ">
                 <FaPhoneAlt className="text-xl" />
               </div>
-              <span>+123-456-7890</span>
+              <span>+91 974 974 9596</span>
             </a>
             <a
               href="mailto:support@example.com"
@@ -150,7 +150,7 @@ const ContactForm = () => {
                 <FaEnvelope className="text-xl" />
               </div>
 
-              <span>support@example.com</span>
+              <span>info@flairtechnologies.in</span>
             </a>
           </div>
         </div>

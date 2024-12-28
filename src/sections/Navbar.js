@@ -86,7 +86,7 @@ const Navbar = () => {
                     {openMenu === key ? (
                       <FaChevronDown className="ml-2 h-3 w-3 text-gray-300" />
                     ) : (
-                      <FaChevronRight className="ml-2 h-3 w-3 text-gray-300" />
+                      <FaChevronRight className="ml h-3 w-3 text-gray-300" />
                     )}
                   </span>
                 )}
