@@ -16,7 +16,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-8 px-6 md:px-8 lg:px-16">
+    <section className="py-8 px-6 md:px-8 lg:px-16 w-full">
       <div
         className="flex flex-col lg:flex-row items-center justify-center bg-white shadow-xl rounded-lg mx-auto w-full md:full lg:w-full p-6"
         data-aos="fade-up"
