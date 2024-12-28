@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-sans bg-bg_color overflow-x-hidden w-full h-full;
+  @apply font-sans bg-bg_color overflow-x-hidden w-screen h-screen;
 }
 
 @layer components {
@@ -16,7 +16,7 @@ body {
   }
 
   .custom_container {
-    @apply lg:px-9 xl:px-28 w-full;
+    @apply lg:px-9 xl:px-28 w-screen;
   }
 }
 

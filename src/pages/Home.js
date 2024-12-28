@@ -21,7 +21,7 @@ const Home = () => {
   }, []);
 
   return (
-    <main className="relative">
+    <main>
       {/* Background Image for Building */}
       {/* <div className="absolute top-[25%] right-0 -z-1">
         <img
